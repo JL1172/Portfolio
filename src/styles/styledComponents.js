@@ -20,9 +20,9 @@ width : 100%;
 min-width : 15rem;
 max-width : 100%;
 align-items : center;
-min-height : 200vh;
-max-height : fit-content;
-height : 500vh;
+min-height : 300vh;
+max-height : 650vh;
+height : 600vh;
 font-family: 'Montserrat', sans-serif;
 flex-wrap : wrap;
 
@@ -46,7 +46,7 @@ const slider = keyframes`
 
 }
 100% {
-    transform : scaleY(200000%); 
+    transform : scaleY(273750%); 
     opacity : .2;
 }
 `
@@ -87,11 +87,11 @@ const fadeOpacity = keyframes`
 `
 const slider3 = keyframes`
 0% {
-
+    opacity : .3;
 }
 100% {
-    transform : translateY(100vh); 
-    opacity : .4;
+    transform : translateY(100rem); 
+    opacity : .0;
 }
 `
 const lineSlide = keyframes`
@@ -151,7 +151,7 @@ main::before {
     top : -1.4rem;
     color : aquamarine;
     opacity : 0;
-    animation : ${slider3} 6s ease-in-out forwards;
+    animation : ${slider3} 7s ease-in-out infinite;
 }
 .words {
     display : flex;
@@ -353,7 +353,6 @@ div:nth-child(12) {
     display : flex;
     flex-direction : column;
     flex-basis : 200px;
-    flex-wrap : wrap;
     justify-content : space-evenly;
     position : relative;
     div {
