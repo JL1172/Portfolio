@@ -1,18 +1,27 @@
 import { useState } from "react";
 import { HeaderDiv, ToggleBar } from "../styles/styledComponents";
 import { useMenu } from "./customHooks/useMenu";
+import { connect } from "react-redux";
+import { toggleTheMenu } from "./actions/headerActions";
 
-export default function Header() {
-    const [menuVisible, toggleMenu] = useMenu(false);
+ function Header(props) {
     return (
         <HeaderDiv>
-            <div id="menu" ><span onClick={toggleMenu} id="menuIcon" className="material-symbols-outlined">
-                {menuVisible ? "close" : "menu"}
+            <div id="menu" ><span onClick={()=>props.toggleTheMenu()} id="menuIcon" className="material-symbols-outlined">
+                {props.menuVisibility ? "close" : "menu"}
             </span>
-                <ToggleBar menuVisible = {menuVisible}>
+                <ToggleBar menuVisible = {props.menuVisibility}>
 
                 </ToggleBar>
             </div>
         </HeaderDiv>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        menuVisibility : state.headerState,
+    }
+}
+
+export default connect(mapStateToProps,{toggleTheMenu})(Header);

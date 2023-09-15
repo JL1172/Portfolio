@@ -570,14 +570,32 @@ export const HeaderDiv = styled.div`
     }
   }
 `
+const sideBar = keyframes`
+0% {
+    opacity : 0;
+    
+}
+100% {
+    opacity : 1;
+    transform : scaleX(100%); 
+}
+`
 export const ToggleBar = styled.div`
-
-        border : 2px solid white;
         position : absolute;
         top : 7rem;
         height : 40rem;
         width : 15rem;
         transition : 2s ease-out; 
+        transform-origin : left;
+        border-right : 2px solid rgb(61, 41, 41);
+        border-bottom : 2px solid rgb(61, 41, 41);
+        transform : scaleX(0); 
+        background-color :rgb(24, 21, 21);
+        ${props => 
+        props.menuVisible && 
+        css`
+        animation : ${sideBar} .5s ease-in-out forwards;
+        ` }
 `
 
 //! end header

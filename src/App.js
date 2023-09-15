@@ -6,7 +6,7 @@ import { MainPage } from './styles/styledComponents';
 
 function App() {
   return (
-    <MainPage>
+    <MainPage >
       <Header />
       <Content />
     </MainPage>
