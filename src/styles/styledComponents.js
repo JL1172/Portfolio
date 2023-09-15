@@ -20,8 +20,9 @@ width : 100%;
 min-width : 15rem;
 max-width : 100%;
 align-items : center;
-min-height : 300vh;
+min-height : 200vh;
 max-height : fit-content;
+height : 500vh;
 font-family: 'Montserrat', sans-serif;
 flex-wrap : wrap;
 
@@ -46,7 +47,7 @@ const slider = keyframes`
 }
 100% {
     transform : scaleY(200000%); 
-    opacity : .6;
+    opacity : .2;
 }
 `
 const slider2 = keyframes`
@@ -76,11 +77,28 @@ const fadeIn2 = keyframes`
     opacity : .75;
 }
 `
+const fadeOpacity = keyframes`
+0% {
+
+}
+100% {
+    opacity : .5;
+}
+`
+const slider3 = keyframes`
+0% {
+
+}
+100% {
+    transform : translateY(100vh); 
+    opacity : .4;
+}
+`
 export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
 height : 100vh;
-width : 100%;
+width : 50rem;
 min-width : 50%;
 max-width : 100%;
 align-items  :center;
@@ -104,13 +122,28 @@ align-items  :center;
 main::before {
     content : "";
     position : relative;
-    left : -10px;
-    border : 1px solid gray;
+    left : -15px;
+    border : 1px solid aquamarine;
     opacity : 0;
     transform-origin : top;
     animation : ${slider} 3s ease-in-out forwards;
 }
-
+.circle {
+    position : absolute;
+    left : 5px;
+    top : -1.4rem;
+    color : aquamarine;
+    opacity : 0;
+    animation : ${fadeOpacity} 1s ease-in-out forwards;
+}
+#circle2 {
+    position : absolute;
+    left : 5px;
+    top : -1.4rem;
+    color : aquamarine;
+    opacity : 0;
+    animation : ${slider3} 6s ease-in-out forwards;
+}
 .words {
     display : flex;
     align-items : baseline;
@@ -120,6 +153,7 @@ main::before {
     color : lavender;
     font-size : 140%;
     flex-direction : column;
+    position : relative;
 }
 .word {
     display : flex;
