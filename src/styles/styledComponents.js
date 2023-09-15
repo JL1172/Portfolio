@@ -28,18 +28,7 @@ flex-wrap : wrap;
 
 `
 //! end main page
-//!header
-export const HeaderDiv = styled.div`
-  border-bottom: 2px solid rgb(61, 41, 41);
-  background-color :rgb(24, 21, 21);
-  position : fixed;
-  width  :100%;
-  height : 7rem;
-  z-index : 2;
-  flex-wrap : wrap;
-flex-basis : 100px;
-`
-//! end header
+
 //! content
 const slider = keyframes`
 0% {
@@ -548,3 +537,19 @@ div:nth-child(12) {
 }
 
 `
+//!header
+export const HeaderDiv = styled.div`
+  border-bottom: 2px solid rgb(61, 41, 41);
+  background-color :rgb(24, 21, 21);
+  position : fixed;
+  display : flex;
+  justify-content : space-around;
+  align-items : center;
+  width  :100%;
+  height : 7rem;
+  z-index : 2;
+  flex-basis : 100px;
+  color : rgb(157, 43, 233);
+`
+
+//! end header
