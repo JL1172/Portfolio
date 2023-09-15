@@ -11,7 +11,6 @@ import { toggleTheMenu } from "./actions/headerActions";
                 {props.menuVisibility ? "close" : "menu"}
             </span>
                 <ToggleBar menuVisible = {props.menuVisibility}>
-
                 </ToggleBar>
             </div>
         </HeaderDiv>

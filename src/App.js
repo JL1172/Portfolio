@@ -1,3 +1,4 @@
+import { connect } from 'react-redux';
 import Animation from './components/Animation';
 import Content from './components/Content';
 import Header from './components/Header';
@@ -13,4 +14,9 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    menuVisibility : state.headerState,
+  }
+}
+export default connect(mapStateToProps,{})(App);

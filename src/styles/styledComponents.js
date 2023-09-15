@@ -113,6 +113,8 @@ const lineSlide = keyframes`
 export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
+filter : ${props=> props.visible ? "brightness(25%)" : ""}; 
+transition : filter .3s ease-in-out; 
 height : 100vh;
 width : 50rem;
 min-width : 50%;
