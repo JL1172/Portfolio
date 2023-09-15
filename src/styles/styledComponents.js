@@ -46,7 +46,7 @@ const slider = keyframes`
 
 }
 100% {
-    transform : scaleY(273750%); 
+    transform : scaleY(1000.1000); 
     opacity : .2;
 }
 `

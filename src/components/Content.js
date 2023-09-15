@@ -56,7 +56,7 @@ export default function Content() {
                     </section>
                     <section className="word routes">
                         <span className="material-symbols-outlined line line1">
-                            horizontal_rule
+                        horizontal_rule
                         </span>
                         <div id="about"><span className="material-symbols-outlined">
                             info
@@ -66,7 +66,7 @@ export default function Content() {
                         </span>
                         <div id="skills"><span className="material-symbols-outlined">
                             terminal
-                        </span>Skills</div>
+                        </span>Stack</div>
                         <span className="material-symbols-outlined line line3">
                             horizontal_rule
                         </span>
