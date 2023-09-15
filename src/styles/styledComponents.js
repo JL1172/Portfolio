@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {keyframes} from "styled-components";
+import {keyframes, css} from "styled-components";
 
 //!main page
 const kf = keyframes`
@@ -535,21 +535,50 @@ div:nth-child(12) {
  transform-origin : left;
  animation-delay : 2150ms;
 }
-
 `
+
 //!header
 export const HeaderDiv = styled.div`
   border-bottom: 2px solid rgb(61, 41, 41);
   background-color :rgb(24, 21, 21);
   position : fixed;
   display : flex;
-  justify-content : space-around;
+  justify-content : space-between;
   align-items : center;
   width  :100%;
   height : 7rem;
   z-index : 2;
   flex-basis : 100px;
-  color : rgb(157, 43, 233);
+  color : gray;
+  #menu {
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    margin-left : 1rem;
+    z-index : -1;
+    #menuIcon {
+        cursor: pointer;
+        transition : .3s ease-in-out; 
+    }
+    #menuItems {
+        border : 2px solid white;
+        position : absolute;
+        top : 7rem;
+        height : 40rem;
+        width : 15rem;
+        transition : 2s ease-out; 
+    }
+  }
+`
+export const ToggleBar = styled.div`
+
+        border : 2px solid white;
+        position : absolute;
+        top : 7rem;
+        height : 40rem;
+        width : 15rem;
+        transition : 2s ease-out; 
 `
 
 //! end header
+
