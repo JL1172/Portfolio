@@ -3,6 +3,7 @@ import Animation from './components/Animation';
 import Content from './components/Content';
 import Header from './components/Header';
 import { MainPage } from './styles/styledComponents';
+import About from './components/About';
 
 
 function App() {

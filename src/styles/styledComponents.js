@@ -20,7 +20,8 @@ width : 100%;
 min-width : 15rem;
 max-width : 100%;
 align-items : center;
-height : 150vh;
+height : 200vh;
+max-height : fit-content;
 font-family: 'Montserrat', sans-serif;
 flex-wrap : wrap;
 
@@ -618,3 +619,13 @@ export const ToggleBar = styled.div`
 
 //! end header
 
+export const AboutMe = styled.div`
+    border : 2px solid black;
+    color : gray;
+    height : 40rem;
+    min-width : 20rem;
+    margin-top : 13rem;
+    flex-wrap : wrap;
+    background-color :rgb(24, 21, 21);
+
+`
