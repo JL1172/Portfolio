@@ -360,43 +360,73 @@ div:nth-child(12) {
         padding-right  :1rem;
         align-items : center;
         margin-bottom : 2rem;
-        transform : translate(1rem,1rem); 
+        transition : letter-spacing 200ms ease-in-out; 
     }
     #about {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
         animation-delay : 1800ms;
-        color : aquamarine; 
+        color : aquamarine;
+        &:hover {
+            letter-spacing : .1rem;
+            transition : .1s ease-in-out; 
+            color : white;
+        } 
     }
     #skills {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
         animation-delay : 1900ms;
         color : aquamarine; 
+        &:hover {
+            color : white;
+            letter-spacing : .1rem;
+            transition : .1s ease-in-out; 
+        } 
     }
     #cv {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
         animation-delay : 2000ms;
         color : aquamarine; 
+        &:hover {
+            color : white;
+            letter-spacing : .1rem;
+            transition : .1s ease-in-out; 
+        } 
     }
     #contact {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
         animation-delay : 2100ms;
         color : aquamarine; 
+        &:hover {
+            letter-spacing : .1rem;
+            transition : .1s ease-in-out; 
+            color : white;
+        } 
     }
     #projects {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
         animation-delay : 2200ms;
         color : aquamarine; 
+        &:hover {
+            letter-spacing : .1rem;
+            transition : .1s ease-in-out; 
+            color : white;
+        } 
     }
 }
 .line {
     color : aquamarine; 
     opacity : 0;
-    left : -2.1rem;
+    left : -1rem;
+    &:hover {
+            color : white;
+            letter-spacing : .1rem;
+            transition : .2s ease-in-out; 
+        } 
 }
 .line1 {
  position : absolute;
