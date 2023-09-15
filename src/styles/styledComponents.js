@@ -17,6 +17,8 @@ display : flex;
 flex-direction : column;
 justify-content : flex-start;
 width : 100%;
+min-width : 15rem;
+max-width : 100%;
 align-items : center;
 min-height : 300vh;
 max-height : fit-content;
@@ -52,25 +54,25 @@ const slider2 = keyframes`
 
 }
 100% {
-    transform : scaleX(6000%); 
+    transform : scaleX(5900%); 
     opacity : .6;
 }
 `
 const fadeIn = keyframes`
 0% {
-    transform : translate(1rem,1rem);
+
 }
 100% {
-    transform : scale(1);
+    transform : translate(1rem,1rem); 
     opacity : .75;
 }
 `
 const fadeIn2 = keyframes`
 0% {
-    transform : translate(1rem,-1rem);
+  
 }
 100% {
-    transform : scale(1);
+    transform : translate(1rem,1rem); 
     opacity : .75;
 }
 `
@@ -79,16 +81,15 @@ display : flex;
 flex-direction : column;
 height : 100vh;
 width : 100%;
+min-width : 50%;
+max-width : 100%;
 align-items  :center;
-flex-wrap : wrap;
-flex-basis : 100px;
 #relative {
     position : relative;
 }
 #span::before {
     content : "";
-    border : 1px solid royalblue;
-    background-color : royalblue;
+    border : 1px solid aquamarine;
     /* background-color : rgb(31, 25, 25); */
     height : 2.2rem;
     position :absolute;
@@ -97,19 +98,17 @@ flex-basis : 100px;
     opacity : 0;
     animation : ${slider2} .5s ease-in-out forwards; 
     animation-delay : 1750ms;
-    flex-wrap : wrap;
-flex-basis : 100px;
+
 }
 
 main::before {
     content : "";
     position : relative;
-    left : -5rem;
+    left : -10px;
     border : 1px solid gray;
     opacity : 0;
+    transform-origin : top;
     animation : ${slider} 3s ease-in-out forwards;
-    flex-wrap : wrap;
-flex-basis : 100px;
 }
 
 .words {
@@ -117,17 +116,16 @@ flex-basis : 100px;
     align-items : baseline;
     height : 40rem;
     margin-top : 15rem;
+    padding-left : 2rem;
     color : lavender;
-    font-size : 150%;
+    font-size : 140%;
     flex-direction : column;
-    flex-wrap : wrap;
-flex-basis : 100px;
 }
 .word {
     display : flex;
     margin-right : 1rem;
-    flex-wrap : wrap;
-flex-basis : 100px;
+    flex-basis  :6rem;
+
 }
 div:nth-child(1) {
     opacity : 0;
@@ -308,57 +306,47 @@ div:nth-child(12) {
     color : gray;
 }
 .routes {
-    margin-top : 5rem;
+    margin-top : 2rem;
     display : flex;
-    flex-direction  :column;
+    flex-direction : column;
+    flex-basis : 200px;
     flex-wrap : wrap;
-    flex-grow : 2;
     justify-content : space-evenly;
     div {
         display : flex;
         padding-right  :1rem;
         align-items : center;
-        flex-grow : 2;
+        margin-bottom : 2rem;
     }
     #about {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
         animation-delay : 1800ms;
         color : aquamarine; 
-        flex-grow : 2;
-        margin-left : 2rem;
     }
     #skills {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
-        animation-delay : 1800ms;
+        animation-delay : 1850ms;
         color : aquamarine; 
-        flex-grow :2;
-        margin-left : 3.5rem;
     }
     #cv {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
-        animation-delay : 1800ms;
+        animation-delay : 1900ms;
         color : aquamarine; 
-        flex-grow : 2;
-        margin-left : 5rem;
     }
     #contact {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
-        animation-delay : 1800ms;
+        animation-delay : 1950ms;
         color : aquamarine; 
-        flex-grow : 2;
-        margin-left : 3.5rem;
     }
     #projects {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
-        animation-delay : 1800ms;
+        animation-delay : 2000ms;
         color : aquamarine; 
-        flex-grow : 2;
-        margin-left : 2rem;
     }
 }
 .brackets {

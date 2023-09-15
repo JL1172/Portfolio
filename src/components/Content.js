@@ -57,7 +57,7 @@ export default function Content() {
                         </span>
                     </section>
                     <section className="word routes">
-                        <div className="brackets">{"<div>"}</div>
+
                         <div id="about"><span className="material-symbols-outlined">
                             info
                         </span>About Me</div>
@@ -73,7 +73,7 @@ export default function Content() {
                         <div id="projects"><span className="material-symbols-outlined">
                             stack
                         </span>Projects</div>
-                        <div className="brackets">{"</div>"}</div>
+
                     </section>
                 </main>
 
