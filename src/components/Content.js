@@ -63,32 +63,36 @@ export default function Content() {
                         </span>
                     </section>
                     <section className="word routes">
-
-                        <div id="about"><span className="material-symbols-outlined line">
+                        <span className="material-symbols-outlined line line1">
                             horizontal_rule
-                        </span><span className="material-symbols-outlined">
-                                info
-                            </span>About Me</div>
-                        <div id="skills"><span className="material-symbols-outlined line">
+                        </span>
+                        <div id="about"><span className="material-symbols-outlined">
+                            info
+                        </span>About Me</div>
+                        <span className="material-symbols-outlined line line2">
                             horizontal_rule
-                        </span><span className="material-symbols-outlined">
-                                terminal
-                            </span>Skills</div>
-                        <div id="cv"><span className="material-symbols-outlined line">
+                        </span>
+                        <div id="skills"><span className="material-symbols-outlined">
+                            terminal
+                        </span>Skills</div>
+                        <span className="material-symbols-outlined line line3">
                             horizontal_rule
-                        </span><span className="material-symbols-outlined">
-                                work
-                            </span>CV</div>
-                        <div id="contact"><span className="material-symbols-outlined line">
+                        </span>
+                        <div id="cv"><span className="material-symbols-outlined">
+                            work
+                        </span>CV</div>
+                        <span className="material-symbols-outlined line line4">
                             horizontal_rule
-                        </span><span className="material-symbols-outlined">
-                                link
-                            </span>Contact</div>
-                        <div id="projects"><span className="material-symbols-outlined line">
+                        </span>
+                        <div id="contact"><span className="material-symbols-outlined">
+                            link
+                        </span>Contact</div>
+                        <span className="material-symbols-outlined line line5">
                             horizontal_rule
-                        </span><span className="material-symbols-outlined">
-                                stack
-                            </span>Projects</div>
+                        </span>
+                        <div id="projects"><span className="material-symbols-outlined">
+                            stack
+                        </span>Projects</div>
 
                     </section>
                 </main>

@@ -64,7 +64,7 @@ const fadeIn = keyframes`
 
 }
 100% {
-    transform : translate(1rem,1rem); 
+    transform : translateX(5rem);
     opacity : .75;
 }
 `
@@ -73,7 +73,7 @@ const fadeIn2 = keyframes`
   
 }
 100% {
-    transform : translate(1rem,1rem); 
+    transform : translateX(5rem);
     opacity : .75;
 }
 `
@@ -92,6 +92,15 @@ const slider3 = keyframes`
 100% {
     transform : translateY(100vh); 
     opacity : .4;
+}
+`
+const lineSlide = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleX(500%);
+    opacity : .5;
 }
 `
 export const ContentDiv = styled.div`
@@ -346,11 +355,13 @@ div:nth-child(12) {
     flex-basis : 200px;
     flex-wrap : wrap;
     justify-content : space-evenly;
+    position : relative;
     div {
         display : flex;
         padding-right  :1rem;
         align-items : center;
         margin-bottom : 2rem;
+        transform : translate(1rem,1rem); 
     }
     #about {
         opacity : 0;
@@ -361,29 +372,67 @@ div:nth-child(12) {
     #skills {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
-        animation-delay : 1850ms;
+        animation-delay : 1900ms;
         color : aquamarine; 
     }
     #cv {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
-        animation-delay : 1900ms;
+        animation-delay : 2000ms;
         color : aquamarine; 
     }
     #contact {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
-        animation-delay : 1950ms;
+        animation-delay : 2100ms;
         color : aquamarine; 
     }
     #projects {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
-        animation-delay : 2000ms;
+        animation-delay : 2200ms;
         color : aquamarine; 
     }
 }
-.brackets {
-    color : royalblue;
+.line {
+    color : aquamarine; 
+    opacity : 0;
+    left : -2.1rem;
 }
+.line1 {
+ position : absolute;
+ top :16.8rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1775ms;
+}
+.line2 {
+ position : absolute;
+ top : .5rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1850ms;
+}
+.line3 {
+ position : absolute;
+ top :4.5rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1950ms;
+}
+.line4 {
+ position : absolute;
+ top :8.7rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 2050ms;
+}
+.line5 {
+ position : absolute;
+ top :12.7rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 2150ms;
+}
+
 `
