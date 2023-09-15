@@ -59,6 +59,24 @@ const slider2 = keyframes`
     opacity : .6;
 }
 `
+const slider5 = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleX(7600%); 
+    opacity : .6;
+}
+`
+const slider7 = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleX(6300%); 
+    opacity : .6;
+}
+`
 const fadeIn = keyframes`
 0% {
 
@@ -166,7 +184,7 @@ main::before {
 }
 .word {
     display : flex;
-    margin-right : 1rem;
+    margin-right : .5rem;
     flex-basis  :6rem;
 
 }
@@ -346,7 +364,7 @@ div:nth-child(12) {
 }
 }
 .type {
-    color : gray;
+    color : rgb(157, 43, 233);
 }
 .routes {
     margin-top : 2rem;
@@ -362,6 +380,7 @@ div:nth-child(12) {
         margin-bottom : 2rem;
         transition : letter-spacing 200ms ease-in-out; 
     }
+
     #about {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
@@ -373,6 +392,18 @@ div:nth-child(12) {
             color : white;
         } 
     }
+    #about:hover::before {
+    content : "";
+    border : 1px solid aquamarine;
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    z-index : -1; 
+    animation : ${slider5} .3s ease-in-out forwards;
+    color : white;
+}
     #skills {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
@@ -384,6 +415,19 @@ div:nth-child(12) {
             transition : .1s ease-in-out; 
         } 
     }
+    #skills:hover::before {
+    content : "";
+    border : 1px solid aquamarine;
+    /* background-color : rgb(31, 25, 25); */
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    animation : ${slider2} .3s ease-in-out forwards;
+    z-index : -1;
+    color : white;
+}
     #cv {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
@@ -395,6 +439,19 @@ div:nth-child(12) {
             transition : .1s ease-in-out; 
         } 
     }
+    #cv:hover::before {
+    content : "";
+    border : 1px solid aquamarine;
+    /* background-color : rgb(31, 25, 25); */
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    animation : ${slider2} .3s ease-in-out forwards;
+    z-index : -1;
+    color : white;
+}
     #contact {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
@@ -406,6 +463,19 @@ div:nth-child(12) {
             color : white;
         } 
     }
+    #contact:hover::before {
+    content : "";
+    border : 1px solid aquamarine;
+    /* background-color : rgb(31, 25, 25); */
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    animation : ${slider7} .3s ease-in-out forwards;
+    z-index : -1;
+    color : white;
+}
     #projects {
         opacity : 0;
         animation : ${fadeIn} 1s ease-in-out forwards;
@@ -417,6 +487,19 @@ div:nth-child(12) {
             color : white;
         } 
     }
+    #projects:hover::before {
+    content : "";
+    border : 1px solid aquamarine;
+    /* background-color : rgb(31, 25, 25); */
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    animation : ${slider7} .3s ease-in-out forwards;
+    z-index : -1;
+    color : white;
+}
 }
 .line {
     color : aquamarine; 
