@@ -6,6 +6,12 @@ export default function Content() {
         <div style={{ position: "relative", width: "100%" }}>
             <ContentDiv>
                 <main className="words">
+                    <span className="material-symbols-outlined circle">
+                        circle
+                    </span>
+                    <span id="circle2" className="material-symbols-outlined">
+                        circle
+                    </span>
                     <section className="word">
                         <div><span className="material-symbols-outlined">
                             code
@@ -40,17 +46,54 @@ export default function Content() {
                         <div>a</div>
                         <div>r</div>
                         <div style={{ paddingRight: "1rem" }}>e</div>
-                        <div>d</div>
-                        <div>e</div>
-                        <div>v</div>
-                        <div>e</div>
-                        <div>l</div>
-                        <div>o</div>
-                        <div>p</div>
-                        <div>e</div>
-                        <div>r<span className="material-symbols-outlined">
-                            code
-                        </span></div>
+                        <span id="relative">
+                            <span id="span" style={{ display: "flex" }}>
+                                <div id="one">d</div>
+                                <div id="two">e</div>
+                                <div id="three">v</div>
+                                <div id="four">e</div>
+                                <div id="five">l</div>
+                                <div id="six">o</div>
+                                <div id="seven">p</div>
+                                <div id="eight">e</div>
+                                <div id="nine">r<span className="material-symbols-outlined">
+                                    code
+                                </span></div>
+                            </span>
+                        </span>
+                    </section>
+                    <section className="word routes">
+                        <span className="material-symbols-outlined line line1">
+                            horizontal_rule
+                        </span>
+                        <div id="about"><span className="material-symbols-outlined">
+                            info
+                        </span>About Me</div>
+                        <span className="material-symbols-outlined line line2">
+                            horizontal_rule
+                        </span>
+                        <div id="skills"><span className="material-symbols-outlined">
+                            terminal
+                        </span>Skills</div>
+                        <span className="material-symbols-outlined line line3">
+                            horizontal_rule
+                        </span>
+                        <div id="cv"><span className="material-symbols-outlined">
+                            work
+                        </span>CV</div>
+                        <span className="material-symbols-outlined line line4">
+                            horizontal_rule
+                        </span>
+                        <div id="contact"><span className="material-symbols-outlined">
+                            link
+                        </span>Contact</div>
+                        <span className="material-symbols-outlined line line5">
+                            horizontal_rule
+                        </span>
+                        <div id="projects"><span className="material-symbols-outlined">
+                            stack
+                        </span>Projects</div>
+
                     </section>
                 </main>
 

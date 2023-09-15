@@ -16,10 +16,15 @@ background-color: rgb(31, 25, 25);
 display : flex;
 flex-direction : column;
 justify-content : flex-start;
+width : 100%;
+min-width : 15rem;
+max-width : 100%;
 align-items : center;
-min-height : 300vh;
+min-height : 200vh;
 max-height : fit-content;
+height : 500vh;
 font-family: 'Montserrat', sans-serif;
+flex-wrap : wrap;
 
 `
 //! end main page
@@ -31,6 +36,8 @@ export const HeaderDiv = styled.div`
   width  :100%;
   height : 7rem;
   z-index : 2;
+  flex-wrap : wrap;
+flex-basis : 100px;
 `
 //! end header
 //! content
@@ -40,37 +47,128 @@ const slider = keyframes`
 }
 100% {
     transform : scaleY(200000%); 
+    opacity : .2;
+}
+`
+const slider2 = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleX(5900%); 
     opacity : .6;
 }
 `
+const fadeIn = keyframes`
+0% {
 
+}
+100% {
+    transform : translateX(5rem);
+    opacity : .75;
+}
+`
+const fadeIn2 = keyframes`
+0% {
+  
+}
+100% {
+    transform : translateX(5rem);
+    opacity : .75;
+}
+`
+const fadeOpacity = keyframes`
+0% {
+
+}
+100% {
+    opacity : .5;
+}
+`
+const slider3 = keyframes`
+0% {
+
+}
+100% {
+    transform : translateY(100vh); 
+    opacity : .4;
+}
+`
+const lineSlide = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleX(500%);
+    opacity : .5;
+}
+`
 export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
 height : 100vh;
-width : 100%;
+width : 50rem;
+min-width : 50%;
+max-width : 100%;
 align-items  :center;
+#relative {
+    position : relative;
+}
+#span::before {
+    content : "";
+    border : 1px solid aquamarine;
+    /* background-color : rgb(31, 25, 25); */
+    height : 2.2rem;
+    position :absolute;
+    width : 0;
+    transform-origin : left;
+    opacity : 0;
+    animation : ${slider2} .5s ease-in-out forwards; 
+    animation-delay : 1750ms;
+
+}
+
 main::before {
     content : "";
     position : relative;
-    left : -10rem;
-    border : 1px solid gray;
+    left : -15px;
+    border : 1px solid aquamarine;
     opacity : 0;
+    transform-origin : top;
     animation : ${slider} 3s ease-in-out forwards;
 }
-
+.circle {
+    position : absolute;
+    left : 5px;
+    top : -1.4rem;
+    color : aquamarine;
+    opacity : 0;
+    animation : ${fadeOpacity} 1s ease-in-out forwards;
+}
+#circle2 {
+    position : absolute;
+    left : 5px;
+    top : -1.4rem;
+    color : aquamarine;
+    opacity : 0;
+    animation : ${slider3} 6s ease-in-out forwards;
+}
 .words {
     display : flex;
     align-items : baseline;
     height : 40rem;
     margin-top : 15rem;
+    padding-left : 2rem;
     color : lavender;
-    font-size : 30px;
+    font-size : 140%;
     flex-direction : column;
+    position : relative;
 }
 .word {
     display : flex;
     margin-right : 1rem;
+    flex-basis  :6rem;
+
 }
 div:nth-child(1) {
     opacity : 0;
@@ -79,172 +177,262 @@ div:nth-child(1) {
 div:nth-child(2) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .2s;
+    animation-delay : 50ms;
 }
 div:nth-child(3) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .3s;
+    animation-delay : 100ms;
 }
 div:nth-child(4) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .4s;
+    animation-delay : 150ms;
 }
 div:nth-child(5) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .5s;
+    animation-delay : 200ms;
 }
 div:nth-child(6) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .6s;
+    animation-delay : 250ms;
 }
 div:nth-child(7) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .7s;
+    animation-delay :300ms;
 }
 div:nth-child(8) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .8s;
+    animation-delay : 350ms;
 }
 div:nth-child(9) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : .9s;
+    animation-delay : 400ms;
 }
 div:nth-child(10) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 1s;
+    animation-delay : 450ms;
 }
 div:nth-child(11) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 1.1s;
+    animation-delay : 500ms;
 }
 div:nth-child(12) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 1.2s;
+    animation-delay : 550ms;
 }
 div:nth-child(13) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 1.5s;
+    animation-delay : 600ms;
 }
 
 #second {
     div:nth-child(1) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2s;
+    animation-delay : 650ms;
+
 }
 div:nth-child(2) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.1s;
+    animation-delay : 700ms;
 }
 div:nth-child(3) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.2s;
+    animation-delay : 750ms;
 }
 div:nth-child(4) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.3s;
+    animation-delay : 800ms;
 }
 div:nth-child(5) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.4s;
+    animation-delay : 850ms;
 }
 div:nth-child(6) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.5s;
+    animation-delay : 900ms;
 }
 div:nth-child(7) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.6s;
+    animation-delay :950ms;
 }
 div:nth-child(8) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.7s;
+    animation-delay : 1000ms;
 }
 div:nth-child(9) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.8s;
+    animation-delay : 1050ms;
 }
 div:nth-child(10) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 2.9s;
+    animation-delay : 1100ms;
 }
 div:nth-child(11) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3s;
+    animation-delay : 1150ms;
 }
 div:nth-child(12) {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.1s;
+    animation-delay : 1200ms;
 }
-div:nth-child(13) {
+#one {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.2s;
+    animation-delay : 1250ms;
+    color : azure;
 }
-div:nth-child(14) {
+#two {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.3s;
+    animation-delay : 1300ms;
 }
-div:nth-child(15) {
+#three {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.4s;
+    animation-delay : 1350ms;
 }
-div:nth-child(16) {
+#four {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.5s;
+    animation-delay : 1400ms;
 }
-div:nth-child(17) {
+#five {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.6s;
+    animation-delay : 1450ms;
 }
-div:nth-child(18) {
+#six{
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.7s;
+    animation-delay : 1500ms;
 }
-div:nth-child(19) {
+#seven {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.8s;
+    animation-delay : 1550ms;
 }
-div:nth-child(20) {
+#eight {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 3.9s;
+    animation-delay : 1600ms;
 }
-div:nth-child(21) {
+#nine {
     opacity : 0;
     animation : ${kf} .1s ease-in-out forwards;
-    animation-delay : 4s;
+    animation-delay : 1650ms;
+    
 }
 }
 .type {
     color : gray;
 }
+.routes {
+    margin-top : 2rem;
+    display : flex;
+    flex-direction : column;
+    flex-basis : 200px;
+    flex-wrap : wrap;
+    justify-content : space-evenly;
+    position : relative;
+    div {
+        display : flex;
+        padding-right  :1rem;
+        align-items : center;
+        margin-bottom : 2rem;
+        transform : translate(1rem,1rem); 
+    }
+    #about {
+        opacity : 0;
+        animation : ${fadeIn} 1s ease-in-out forwards;
+        animation-delay : 1800ms;
+        color : aquamarine; 
+    }
+    #skills {
+        opacity : 0;
+        animation : ${fadeIn2} 1s ease-in-out forwards;
+        animation-delay : 1900ms;
+        color : aquamarine; 
+    }
+    #cv {
+        opacity : 0;
+        animation : ${fadeIn} 1s ease-in-out forwards;
+        animation-delay : 2000ms;
+        color : aquamarine; 
+    }
+    #contact {
+        opacity : 0;
+        animation : ${fadeIn2} 1s ease-in-out forwards;
+        animation-delay : 2100ms;
+        color : aquamarine; 
+    }
+    #projects {
+        opacity : 0;
+        animation : ${fadeIn} 1s ease-in-out forwards;
+        animation-delay : 2200ms;
+        color : aquamarine; 
+    }
+}
+.line {
+    color : aquamarine; 
+    opacity : 0;
+    left : -2.1rem;
+}
+.line1 {
+ position : absolute;
+ top :16.8rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1775ms;
+}
+.line2 {
+ position : absolute;
+ top : .5rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1850ms;
+}
+.line3 {
+ position : absolute;
+ top :4.5rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 1950ms;
+}
+.line4 {
+ position : absolute;
+ top :8.7rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 2050ms;
+}
+.line5 {
+ position : absolute;
+ top :12.7rem;
+ animation : ${lineSlide} .5s ease-in-out forwards;
+ transform-origin : left;
+ animation-delay : 2150ms;
+}
+
 `
