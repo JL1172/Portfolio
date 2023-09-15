@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {keyframes} from "styled-components";
+import {keyframes, css} from "styled-components";
 
 //!main page
 const kf = keyframes`
@@ -28,18 +28,7 @@ flex-wrap : wrap;
 
 `
 //! end main page
-//!header
-export const HeaderDiv = styled.div`
-  border-bottom: 2px solid rgb(61, 41, 41);
-  background-color :rgb(24, 21, 21);
-  position : fixed;
-  width  :100%;
-  height : 7rem;
-  z-index : 2;
-  flex-wrap : wrap;
-flex-basis : 100px;
-`
-//! end header
+
 //! content
 const slider = keyframes`
 0% {
@@ -124,6 +113,8 @@ const lineSlide = keyframes`
 export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
+filter : ${props=> props.visible ? "brightness(25%)" : ""}; 
+transition : filter .3s ease-in-out; 
 height : 100vh;
 width : 50rem;
 min-width : 50%;
@@ -546,5 +537,68 @@ div:nth-child(12) {
  transform-origin : left;
  animation-delay : 2150ms;
 }
-
 `
+
+//!header
+export const HeaderDiv = styled.div`
+  border-bottom: 2px solid rgb(61, 41, 41);
+  background-color :rgb(24, 21, 21);
+  position : fixed;
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  width  :100%;
+  height : 7rem;
+  z-index : 2;
+  flex-basis : 100px;
+  color : gray;
+  #menu {
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    margin-left : 1rem;
+    z-index : -1;
+    #menuIcon {
+        cursor: pointer;
+        transition : .3s ease-in-out; 
+    }
+    #menuItems {
+        border : 2px solid white;
+        position : absolute;
+        top : 7rem;
+        height : 40rem;
+        width : 15rem;
+        transition : 2s ease-out; 
+    }
+  }
+`
+const sideBar = keyframes`
+0% {
+    opacity : 0;
+    
+}
+100% {
+    opacity : 1;
+    transform : scaleX(100%); 
+}
+`
+export const ToggleBar = styled.div`
+        position : absolute;
+        top : 7rem;
+        height : 40rem;
+        width : 15rem;
+        transition : 2s ease-out; 
+        transform-origin : left;
+        border-right : 2px solid rgb(61, 41, 41);
+        border-bottom : 2px solid rgb(61, 41, 41);
+        transform : scaleX(0); 
+        background-color :rgb(24, 21, 21);
+        ${props => 
+        props.menuVisible && 
+        css`
+        animation : ${sideBar} .5s ease-in-out forwards;
+        ` }
+`
+
+//! end header
+

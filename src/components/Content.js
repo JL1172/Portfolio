@@ -1,10 +1,11 @@
 import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
+import { connect } from "react-redux";
 
-export default function Content() {
+function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv>
+            <ContentDiv visible = {props.menuVisibility}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
                         circle
@@ -93,3 +94,9 @@ export default function Content() {
         </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+      menuVisibility : state.headerState,
+    }
+  }
+  export default connect(mapStateToProps,{})(Content);
