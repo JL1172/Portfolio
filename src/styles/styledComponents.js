@@ -20,9 +20,7 @@ width : 100%;
 min-width : 15rem;
 max-width : 100%;
 align-items : center;
-min-height : 300vh;
-max-height : 650vh;
-height : 600vh;
+height : 150vh;
 font-family: 'Montserrat', sans-serif;
 flex-wrap : wrap;
 
@@ -35,7 +33,7 @@ const slider = keyframes`
 
 }
 100% {
-    transform : scaleY(1000.1000); 
+    transform : scaleY(40000%); 
     opacity : .2;
 }
 `
@@ -53,7 +51,7 @@ const slider5 = keyframes`
 
 }
 100% {
-    transform : scaleX(7600%); 
+    transform : scaleX(7800%); 
     opacity : .6;
 }
 `
@@ -62,9 +60,18 @@ const slider7 = keyframes`
 
 }
 100% {
-    transform : scaleX(6300%); 
+    transform : scaleX(6800%); 
     opacity : .6;
 }
+`
+const spreadHover = keyframes`
+    0% {
+        
+    }
+    100% {
+        transform : scaleY(200%); 
+        opacity : 1; 
+    }
 `
 const fadeIn = keyframes`
 0% {
@@ -97,8 +104,8 @@ const slider3 = keyframes`
     opacity : .3;
 }
 100% {
-    transform : translateY(100rem); 
-    opacity : .0;
+    transform : translateY(51rem); 
+    opacity : .7;
 }
 `
 const lineSlide = keyframes`
@@ -114,8 +121,7 @@ export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
 filter : ${props=> props.visible ? "brightness(25%)" : ""}; 
-transition : filter .3s ease-in-out; 
-height : 100vh;
+transition : filter .3s ease-in-out;
 width : 50rem;
 min-width : 50%;
 max-width : 100%;
@@ -148,7 +154,7 @@ main::before {
 }
 .circle {
     position : absolute;
-    left : 5px;
+    left : 7px;
     top : -1.4rem;
     color : aquamarine;
     opacity : 0;
@@ -156,11 +162,20 @@ main::before {
 }
 #circle2 {
     position : absolute;
-    left : 5px;
+    left : 6.8px;
     top : -1.4rem;
     color : aquamarine;
     opacity : 0;
     animation : ${slider3} 7s ease-in-out infinite;
+}
+#circle3 {
+    position : absolute;
+    left : 7px;
+    top : 49.8rem;
+    color : aquamarine;
+    opacity : 0;
+    animation : ${fadeOpacity} 1s ease-in-out forwards;
+    animation-delay : 6.5s;
 }
 .words {
     display : flex;
@@ -378,7 +393,7 @@ div:nth-child(12) {
         animation-delay : 1800ms;
         color : aquamarine;
         &:hover {
-            letter-spacing : .1rem;
+            letter-spacing : .2rem;
             transition : .1s ease-in-out; 
             color : white;
         } 
@@ -402,7 +417,8 @@ div:nth-child(12) {
         color : aquamarine; 
         &:hover {
             color : white;
-            letter-spacing : .1rem;
+            opacity : 1;
+            letter-spacing : .2rem;
             transition : .1s ease-in-out; 
         } 
     }
@@ -426,7 +442,7 @@ div:nth-child(12) {
         color : aquamarine; 
         &:hover {
             color : white;
-            letter-spacing : .1rem;
+            letter-spacing : .2rem;
             transition : .1s ease-in-out; 
         } 
     }
@@ -449,7 +465,7 @@ div:nth-child(12) {
         animation-delay : 2100ms;
         color : aquamarine; 
         &:hover {
-            letter-spacing : .1rem;
+            letter-spacing : .2rem;
             transition : .1s ease-in-out; 
             color : white;
         } 
@@ -473,7 +489,7 @@ div:nth-child(12) {
         animation-delay : 2200ms;
         color : aquamarine; 
         &:hover {
-            letter-spacing : .1rem;
+            letter-spacing : .2rem;
             transition : .1s ease-in-out; 
             color : white;
         } 
@@ -498,7 +514,7 @@ div:nth-child(12) {
     left : -1rem;
     &:hover {
             color : white;
-            letter-spacing : .1rem;
+            letter-spacing : .2rem;
             transition : .2s ease-in-out; 
         } 
 }
