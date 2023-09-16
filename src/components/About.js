@@ -4,8 +4,9 @@ import FetchingData from "./fetchingData/FetchingData";
 import { Circles, Dna } from "react-loader-spinner";
 
 function About(props) {
+    console.log(props.aboutIsVisible)
     return (
-        <AboutMe>
+        <AboutMe about = {props.aboutIsVisible} >
             {props.loading ?
                 <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
                     <Circles
@@ -23,6 +24,9 @@ function About(props) {
                     <div>
                         <h1>About Me</h1>
                         <img id="profilePic" src={props.profile_pic} />
+                        <div id = "container">
+                            <div>{props.description}</div>
+                        </div>
                     </div>
                 </>
             }
@@ -34,6 +38,8 @@ const mapStateToProps = state => {
     return {
         loading: state.aboutMeState.loading,
         profile_pic: state.aboutMeState.profile_pic,
+        description : state.aboutMeState.description,
+        aboutIsVisible : state.aboutMeState.rootVisible,
     }
 }
 export default connect(mapStateToProps, {})(About);

@@ -1,10 +1,12 @@
 import { FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE } from "../actions/aboutMeAction"
+import { description } from "../data/data";
 
 const initialState = {
     profile_pic : "",
     profile_information : [],
     loading : false,
     rootVisible : false,
+    description : description.description,
 }
 
 export const aboutMeReducer = (state = initialState, action) => {
@@ -12,7 +14,6 @@ export const aboutMeReducer = (state = initialState, action) => {
         case(FETCHING_DATA) : 
             return({...state, loading : action.payload}); 
         case(PUT_DATA_IN_STATE) :
-        console.log(action.payload)
             return({...state, profile_information : action.payload, profile_pic : action.payload.avatar_url}); 
         case(ROOT_ABOUT_VISIBLE) : 
             return({...state, rootVisible : !state.rootVisible}); 

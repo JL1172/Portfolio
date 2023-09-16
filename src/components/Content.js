@@ -7,7 +7,7 @@ import { fetchDataSuccess, rootAboutVisible } from "./actions/aboutMeAction";
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv visible={props.menuVisibility}>
+            <ContentDiv visible={props.menuVisibility} aboutVisible = {props.aboutIsVisible}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
                         circle
@@ -82,19 +82,22 @@ function Content(props) {
                         <div id="contact"><span className="material-symbols-outlined">
                             link
                         </span>Contact</div>
-                        <span className="material-symbols-outlined line line5">
+
+                        <span className="material-symbols-outlined line line56">
                             horizontal_rule
                         </span>
                         <div id="projects"><span className="material-symbols-outlined">
                             stack
                         </span>Projects</div>
-
+             
+                    <span id = "firstRoute"></span>
+                    <span id = "secondRoute"></span>
                     </section>
                     <span id="circle3" className="material-symbols-outlined">
                         circle
                     </span>
                 </main>
-            </ContentDiv >
+            </ContentDiv  >
             {props.aboutIsVisible && <About />}
         </div>
     )
