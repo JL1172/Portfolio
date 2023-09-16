@@ -2,12 +2,50 @@ import styled from "styled-components";
 import {keyframes, css} from "styled-components";
 
 //!main page
+const routeLine = keyframes`
+0% {
+
+}
+100% {
+    opacity : .6;
+    transform : scaleY(30000%); 
+}
+`
+const xLine = keyframes`
+0% {
+
+}
+100% {
+    opacity : .6;
+    transform : scaleX(2400%);
+}
+`
+
+
 const kf = keyframes`
 0% {
    transform : scale(125%); 
 }
 100% {
    opacity : 1;
+}
+`
+const slideONY = keyframes`
+0% {
+opacity : 1;
+}
+100%{
+    transform : translateY(2500%); 
+}
+`
+
+const slideOnX = keyframes`
+0% {
+    opacity : 1;
+}
+100% {
+    transform : translateX(235%); 
+    opacity : 0;
 }
 `
 
@@ -411,6 +449,7 @@ div:nth-child(12) {
     animation : ${slider5} .3s ease-in-out forwards;
     color : white;
 }
+
     #skills {
         opacity : 0;
         animation : ${fadeIn2} 1s ease-in-out forwards;
@@ -524,7 +563,7 @@ div:nth-child(12) {
  top :16.8rem;
  animation : ${lineSlide} .5s ease-in-out forwards;
  transform-origin : left;
- animation-delay : 1775ms;
+ animation-delay : 2775ms;
 }
 .line2 {
  position : absolute;
@@ -547,12 +586,76 @@ div:nth-child(12) {
  transform-origin : left;
  animation-delay : 2050ms;
 }
-.line5 {
+.line56 {
  position : absolute;
  top :12.7rem;
  animation : ${lineSlide} .5s ease-in-out forwards;
  transform-origin : left;
- animation-delay : 2150ms;
+ animation-delay :2350ms;
+}
+
+
+
+.firstRoute::after {
+        content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 18rem;
+        bottom : 19.2rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props => 
+        props.aboutVisible && 
+        css`        
+        animation : ${routeLine} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+        }
+    }
+.secondRoute::after {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 15rem;
+        bottom : 19.2rem;
+        transform-origin : left;
+        opacity : 0;
+        ${props => 
+        props.aboutVisible && 
+        css`    
+        animation : ${xLine} .4s ease-in-out forwards;
+        `
+        }
+}
+.move-y {
+    position : absolute;
+    top : .5rem;
+    left : 17.37rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.aboutVisible && 
+    css`
+    animation : ${slideONY} 1.6s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
+.move-x {
+    position : absolute;
+    border-radius : 10rem;
+    top :.5rem;
+    left : 13.7rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.aboutVisible && 
+    css`
+    animation : ${slideOnX} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
 }
 `
 
@@ -619,13 +722,83 @@ export const ToggleBar = styled.div`
 
 //! end header
 
+const aboutRight = keyframes`
+0% {
+
+}
+100% {
+    transform : scaleY(100%); 
+    opacity : 1;
+}
+`
+
+const blink = keyframes`
+0% {
+    opacity : 1;
+}
+100%{
+    opacity : 0;
+}
+`
+const rotate = keyframes`
+0% {
+}
+100% {
+    transform : rotate(360deg) scale(2.2);
+}
+`
 export const AboutMe = styled.div`
-    border : 2px solid black;
     color : gray;
     height : 40rem;
     min-width : 20rem;
     margin-top : 13rem;
-    flex-wrap : wrap;
     background-color :rgb(24, 21, 21);
-    
+    display : flex;
+    justify-content : center;
+    text-align : center;
+    align-items : flex-start; 
+    box-shadow : 0 0 2em rgb(24, 21, 21);;
+    flex-basis : 100px;
+    flex-wrap : wrap;
+    opacity : 0;
+    padding : 1rem;
+    transform : scaleY(0);
+    transform-origin : top;
+    ${props => props.about && css`
+    animation : ${aboutRight} .6s ease-in-out forwards; 
+    animation-delay : 1.4s;
+    `}
+    h1 {
+        color :  aquamarine;
+    }
+    img {
+        width : 150px;
+        height : 150px;
+        border-radius : 10rem;
+        filter : brightness(50%);
+    }
+    #container {
+     margin-top : 1rem;
+     line-height : 3rem;  
+     opacity : .8; 
+     color : white;
+     position : relative;
+    }
+    .colorWords {
+        color : aquamarine; 
+    }
+#blinking::before {
+    content : "";
+    position : absolute;
+    border : 1px solid white;
+    top : 10.9rem;
+    width : 1rem;
+
+    animation : ${blink} 1s infinite;
+}
+#computer {
+    position : absolute;
+    left : 10rem;
+    animation : ${rotate} 5s ease-in-out forwards ; 
+}
 `
