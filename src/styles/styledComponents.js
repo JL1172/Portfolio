@@ -55,7 +55,7 @@ display : flex;
 flex-direction : column;
 justify-content : flex-start;
 width : 100%;
-min-height : 100rem;
+min-height : 125rem;
 min-width : 15rem;
 max-width : 100%;
 max-height : 400rem;
@@ -728,7 +728,7 @@ const aboutRight = keyframes`
 
 }
 100% {
-    transform : scaleY(100%); 
+    transform : translateX(0); 
     opacity : 1;
 }
 `
@@ -751,8 +751,9 @@ const rotate = keyframes`
 export const AboutMe = styled.div`
     color : gray;
     height : 40rem;
-    min-width : 20rem;
-    margin-top : 13rem;
+    min-width : 10rem;
+    max-width : 95rem;
+    margin-top : 12.95rem;
     background-color :rgb(24, 21, 21);
     display : flex;
     height : fit-content;
@@ -761,8 +762,9 @@ export const AboutMe = styled.div`
     box-shadow : 0 0 2em rgb(24, 21, 21);;
     flex-wrap : wrap;
     opacity : 0;
-    padding-right : 1rem;
-    transform : scaleY(0);
+    transition : .3s;
+    padding-right : 3rem;
+    transform : translatex(-100%); 
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
@@ -806,6 +808,5 @@ export const AboutMe = styled.div`
     position : absolute;
     right: 1rem;
     top : 10rem;
-    animation : ${rotate} 5s ease-in-out forwards ; 
 }
 `
