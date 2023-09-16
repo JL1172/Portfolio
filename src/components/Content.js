@@ -1,11 +1,13 @@
 import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
+import About from "./About";
+import { fetchDataSuccess, rootAboutVisible } from "./actions/aboutMeAction";
 
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv visible = {props.menuVisibility}>
+            <ContentDiv visible={props.menuVisibility}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
                         circle
@@ -57,9 +59,9 @@ function Content(props) {
                     </section>
                     <section className="word routes">
                         <span className="material-symbols-outlined line line1">
-                        horizontal_rule
+                            horizontal_rule
                         </span>
-                        <div id="about"><span className="material-symbols-outlined">
+                        <div onClick = {()=>props.fetchDataSuccess()} id="about"><span className="material-symbols-outlined">
                             info
                         </span>About Me</div>
                         <span className="material-symbols-outlined line line2">
@@ -88,15 +90,19 @@ function Content(props) {
                         </span>Projects</div>
 
                     </section>
+                    <span id="circle3" className="material-symbols-outlined">
+                        circle
+                    </span>
                 </main>
-
             </ContentDiv >
+            {props.aboutIsVisible && <About />}
         </div>
     )
 }
 const mapStateToProps = state => {
     return {
-      menuVisibility : state.headerState,
+        menuVisibility: state.headerState,
+        aboutIsVisible : state.aboutMeState.rootVisible,
     }
-  }
-  export default connect(mapStateToProps,{})(Content);
+}
+export default connect(mapStateToProps, {fetchDataSuccess})(Content);
