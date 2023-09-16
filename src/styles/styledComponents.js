@@ -741,12 +741,34 @@ const blink = keyframes`
     opacity : 0;
 }
 `
+const blink2 = keyframes`
+0% {
+    
+}
+100%{
+    opacity : 1;
+}
+`
 const rotate = keyframes`
 0% {
 }
 100% {
     transform : rotate(360deg) scale(75%);
 }
+`
+const typeWriter = keyframes`
+0% {
+    width : 0;
+}
+100% {
+    width : 100%;
+     opacity: 1;
+    };
+
+`
+const blinker = keyframes`
+from, to {border-right : 1px solid transparent}
+50% {border-right : 1px solid white}
 `
 export const AboutMe = styled.div`
     color : gray;
@@ -759,8 +781,7 @@ export const AboutMe = styled.div`
     height : fit-content;
     justify-content : center;
     align-items : baseline;
-    box-shadow : 0 0 2em rgb(24, 21, 21);;
-    flex-wrap : wrap;
+    box-shadow : 0 0 2em rgb(24, 21, 21);
     opacity : 0;
     transition : .3s;
     padding-right : 3rem;
@@ -786,10 +807,9 @@ export const AboutMe = styled.div`
      box-shadow : 0 0 1em rgb(61, 41, 41);;
      width : 100%;
      padding : 1rem;
+     overflow : hidden;
      display :flex;
-     justify-content :center;
-     align-items : center;
-     opacity : .8; 
+     justify-content :flex-start;
      color : white;
      position : relative;
     }
@@ -800,13 +820,15 @@ export const AboutMe = styled.div`
     content : "";
     position : sticky;
     border : 1px solid white;
-    top : 10.9rem;
+    top : .5rem;
     width : 1rem;
     animation : ${blink} 1s infinite;
+    animation-delay : 12s;
 }
 #computer {
     position : absolute;
     right: 1rem;
     top : 10rem;
 }
+
 `
