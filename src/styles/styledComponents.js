@@ -30,6 +30,24 @@ const kf = keyframes`
    opacity : 1;
 }
 `
+const slideONY = keyframes`
+0% {
+opacity : 1;
+}
+100%{
+    transform : translateY(2500%); 
+}
+`
+
+const slideOnX = keyframes`
+0% {
+    opacity : 1;
+}
+100% {
+    transform : translateX(235%); 
+    opacity : 0;
+}
+`
 
 export const MainPage = styled.div`
 background-color: rgb(31, 25, 25);
@@ -578,7 +596,7 @@ div:nth-child(12) {
 
 
 
-#firstRoute::after {
+.firstRoute::after {
         content : "";
         position : absolute;
         border : 1px solid aquamarine;
@@ -594,7 +612,7 @@ div:nth-child(12) {
         `
         }
     }
-#secondRoute::after {
+.secondRoute::after {
     content : "";
         position : absolute;
         border : 1px solid aquamarine;
@@ -608,6 +626,36 @@ div:nth-child(12) {
         animation : ${xLine} .4s ease-in-out forwards;
         `
         }
+}
+.move-y {
+    position : absolute;
+    top : .5rem;
+    left : 17.37rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.aboutVisible && 
+    css`
+    animation : ${slideONY} 1.6s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
+.move-x {
+    position : absolute;
+    border-radius : 10rem;
+    top :.5rem;
+    left : 13.7rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.aboutVisible && 
+    css`
+    animation : ${slideOnX} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
 }
 `
 
@@ -701,7 +749,7 @@ export const AboutMe = styled.div`
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
-    animation-delay : 1s;
+    animation-delay : 1.4s;
     `}
   
     img {
