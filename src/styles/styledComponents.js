@@ -731,6 +731,22 @@ const aboutRight = keyframes`
     opacity : 1;
 }
 `
+
+const blink = keyframes`
+0% {
+    opacity : 1;
+}
+100%{
+    opacity : 0;
+}
+`
+const rotate = keyframes`
+0% {
+}
+100% {
+    transform : rotate(360deg) scale(2.2);
+}
+`
 export const AboutMe = styled.div`
     color : gray;
     height : 40rem;
@@ -766,9 +782,23 @@ export const AboutMe = styled.div`
      line-height : 3rem;  
      opacity : .8; 
      color : white;
+     position : relative;
     }
     .colorWords {
         color : aquamarine; 
     }
+#blinking::before {
+    content : "";
+    position : absolute;
+    border : 1px solid white;
+    top : 10.9rem;
+    width : 1rem;
 
+    animation : ${blink} 1s infinite;
+}
+#computer {
+    position : absolute;
+    left : 10rem;
+    animation : ${rotate} 5s ease-in-out forwards ; 
+}
 `

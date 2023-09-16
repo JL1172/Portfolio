@@ -7,7 +7,7 @@ const Description =  () => {
     driven to exceed expectations and deliver results. I am passionate about software engineering and
     development. I love what I do and I <span >love</span> the always moving, ever progressing nature of web
     development. I love customer satisfaction and crushing expectations, and I love the fact that there is
-    always something new to learn.</div>
+    always something new to learn<span id = "blinking"></span></div>
     )
 }
 

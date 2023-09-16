@@ -24,6 +24,7 @@ function About(props) {
                 :
                 <>
                     <div style = {{padding : "2rem"}}>
+                        <div><img id = "computer" style = {{backgroundColor : "transparent"}} src = "https://cdn.iconscout.com/icon/free/png-256/free-laptop-screen-device-view-isometric-grid-3d-32801.png?f=webp"/></div>
                         <h1 style = {{margin : "1rem"}}>{}about_me{"()   {"}</h1>
                         <img style = {{margin : "2rem"}}id="profilePic" src={props.profile_pic} />
                         <div style = {{display : "flex", flexBasis : "100px", flexWrap : "wrap", margin : "2rem"}} id = "container">
