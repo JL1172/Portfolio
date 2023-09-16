@@ -8,7 +8,8 @@ export const fetchDataSuccess = () => dispatch => {
     dispatch(fetchingDataLoader(true)); 
     axios.get("https://api.github.com/users/JL1172")
     .then(res=> {
-        console.log(res)
+        dispatch(putDataInState(res.data));
+        dispatch(fetchingDataLoader(false))
     })
     .catch(err=> console.error(err.message)); 
 }
