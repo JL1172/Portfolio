@@ -1,12 +1,11 @@
 import { FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE } from "../actions/aboutMeAction"
-import { description } from "../data/data";
+
 
 const initialState = {
     profile_pic : "",
     profile_information : [],
     loading : false,
     rootVisible : false,
-    description : description.description,
 }
 
 export const aboutMeReducer = (state = initialState, action) => {

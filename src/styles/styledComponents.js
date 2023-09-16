@@ -745,16 +745,30 @@ export const AboutMe = styled.div`
     flex-basis : 100px;
     flex-wrap : wrap;
     opacity : 0;
+    padding : 1rem;
     transform : scaleY(0);
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
     animation-delay : 1.4s;
     `}
-  
+    h1 {
+        color :  aquamarine;
+    }
     img {
         width : 150px;
         height : 150px;
         border-radius : 10rem;
+        filter : brightness(50%);
     }
+    #container {
+     margin-top : 1rem;
+     line-height : 3rem;  
+     opacity : .8; 
+     color : white;
+    }
+    .colorWords {
+        color : aquamarine; 
+    }
+
 `

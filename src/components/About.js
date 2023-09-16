@@ -2,9 +2,11 @@ import { connect } from "react-redux";
 import { AboutMe } from "../styles/styledComponents";
 import FetchingData from "./fetchingData/FetchingData";
 import { Circles, Dna } from "react-loader-spinner";
+import { useEffect, useRef, useState } from "react";
+import Description from "./data/data";
 
 function About(props) {
-    console.log(props.aboutIsVisible)
+   
     return (
         <AboutMe about = {props.aboutIsVisible} >
             {props.loading ?
@@ -21,12 +23,13 @@ function About(props) {
                 </div>
                 :
                 <>
-                    <div>
-                        <h1>About Me</h1>
-                        <img id="profilePic" src={props.profile_pic} />
-                        <div id = "container">
-                            <div>{props.description}</div>
-                        </div>
+                    <div style = {{padding : "2rem"}}>
+                        <h1 style = {{margin : "1rem"}}>{}about_me{"()   {"}</h1>
+                        <img style = {{margin : "2rem"}}id="profilePic" src={props.profile_pic} />
+                        <div style = {{display : "flex", flexBasis : "100px", flexWrap : "wrap", margin : "2rem"}} id = "container">
+                            <Description />
+                            <h1>{"}"}</h1>
+                            </div>
                     </div>
                 </>
             }
@@ -38,7 +41,6 @@ const mapStateToProps = state => {
     return {
         loading: state.aboutMeState.loading,
         profile_pic: state.aboutMeState.profile_pic,
-        description : state.aboutMeState.description,
         aboutIsVisible : state.aboutMeState.rootVisible,
     }
 }
