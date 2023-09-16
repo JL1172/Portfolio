@@ -5,6 +5,7 @@ export const PUT_DATA_IN_STATE = "PUT_DATA_IN_STATE";
 export const ROOT_ABOUT_VISIBLE = "ROOT_ABOUT_VISIBLE"; 
 
 export const fetchDataSuccess = () => dispatch => {
+    dispatch(rootAboutVisible())
     dispatch(fetchingDataLoader(true)); 
     axios.get("https://api.github.com/users/JL1172")
     .then(res=> {
@@ -22,6 +23,6 @@ const putDataInState = (data) => {
     return { type : PUT_DATA_IN_STATE, payload : data}; 
 }
 
-export const rootAboutVisible = () => {
+const rootAboutVisible = () => {
     return {type : ROOT_ABOUT_VISIBLE}
 }

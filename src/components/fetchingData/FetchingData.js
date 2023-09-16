@@ -4,8 +4,8 @@ import { fetchDataSuccess } from "../actions/aboutMeAction"
 
 const FetchingData = (props) => {
     useEffect(()=> {
-        props.fetchDataSuccess();
-    },[])
+        
+    },[props.about])
     return(<></>)
 }
 

@@ -627,5 +627,5 @@ export const AboutMe = styled.div`
     margin-top : 13rem;
     flex-wrap : wrap;
     background-color :rgb(24, 21, 21);
-
+    
 `

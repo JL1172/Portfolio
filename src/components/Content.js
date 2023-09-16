@@ -2,7 +2,7 @@ import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
 import About from "./About";
-import { rootAboutVisible } from "./actions/aboutMeAction";
+import { fetchDataSuccess, rootAboutVisible } from "./actions/aboutMeAction";
 
 function Content(props) {
     return (
@@ -61,7 +61,7 @@ function Content(props) {
                         <span className="material-symbols-outlined line line1">
                             horizontal_rule
                         </span>
-                        <div onClick = {()=>props.rootAboutVisible()} id="about"><span className="material-symbols-outlined">
+                        <div onClick = {()=>props.fetchDataSuccess()} id="about"><span className="material-symbols-outlined">
                             info
                         </span>About Me</div>
                         <span className="material-symbols-outlined line line2">
@@ -105,4 +105,4 @@ const mapStateToProps = state => {
         aboutIsVisible : state.aboutMeState.rootVisible,
     }
 }
-export default connect(mapStateToProps, {rootAboutVisible})(Content);
+export default connect(mapStateToProps, {fetchDataSuccess})(Content);

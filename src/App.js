@@ -4,6 +4,7 @@ import Content from './components/Content';
 import Header from './components/Header';
 import { MainPage } from './styles/styledComponents';
 import About from './components/About';
+import FetchingData from './components/fetchingData/FetchingData';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <MainPage >
       <Header />
       <Content />
+      <FetchingData/>
     </MainPage>
   );
 }
