@@ -55,10 +55,11 @@ display : flex;
 flex-direction : column;
 justify-content : flex-start;
 width : 100%;
+min-height : 100rem;
 min-width : 15rem;
 max-width : 100%;
+max-height : 400rem;
 align-items : center;
-height : 200vh;
 max-height : fit-content;
 font-family: 'Montserrat', sans-serif;
 flex-wrap : wrap;
@@ -744,7 +745,7 @@ const rotate = keyframes`
 0% {
 }
 100% {
-    transform : rotate(360deg) scale(2.2);
+    transform : rotate(360deg) scale(75%);
 }
 `
 export const AboutMe = styled.div`
@@ -754,19 +755,19 @@ export const AboutMe = styled.div`
     margin-top : 13rem;
     background-color :rgb(24, 21, 21);
     display : flex;
+    height : fit-content;
     justify-content : center;
-    text-align : center;
-    align-items : flex-start; 
+    align-items : baseline;
     box-shadow : 0 0 2em rgb(24, 21, 21);;
-    flex-basis : 100px;
     flex-wrap : wrap;
     opacity : 0;
-    padding : 1rem;
+    padding-right : 1rem;
     transform : scaleY(0);
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
     animation-delay : 1.4s;
+    z-index : 2;
     `}
     h1 {
         color :  aquamarine;
@@ -780,6 +781,12 @@ export const AboutMe = styled.div`
     #container {
      margin-top : 1rem;
      line-height : 3rem;  
+     box-shadow : 0 0 1em rgb(61, 41, 41);;
+     width : 100%;
+     padding : 1rem;
+     display :flex;
+     justify-content :center;
+     align-items : center;
      opacity : .8; 
      color : white;
      position : relative;
@@ -789,16 +796,16 @@ export const AboutMe = styled.div`
     }
 #blinking::before {
     content : "";
-    position : absolute;
+    position : sticky;
     border : 1px solid white;
     top : 10.9rem;
     width : 1rem;
-
     animation : ${blink} 1s infinite;
 }
 #computer {
     position : absolute;
-    left : 10rem;
+    right: 1rem;
+    top : 10rem;
     animation : ${rotate} 5s ease-in-out forwards ; 
 }
 `
