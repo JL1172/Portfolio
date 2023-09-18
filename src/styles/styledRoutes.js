@@ -106,6 +106,10 @@ export const StyledStack = styled.div`
         flex-basis : 100px;
         flex-wrap  :wrap;
         margin : 1rem;
+        a {
+            text-decoration : none;
+            color : inherit;
+        }
     }
     li {
         list-style : circle;
@@ -122,6 +126,7 @@ export const StyledStack = styled.div`
         opacity : 0;
         width : 1em;
         top : 1.3rem;
+        transition : .3s ease-in-out; 
     }
     li:hover::before {
         transform  : scaleX(1000%); 
@@ -135,6 +140,7 @@ export const StyledStack = styled.div`
         opacity : 0;
         width : 1em;
         top : 1.3rem;
+        transition : 100ms ease-in-out; 
     }
     .special:hover::before {
         transform  : scaleX(1500%); 

@@ -6,6 +6,7 @@ import { DiBootstrap, DiGit, DiGithubBadge, DiHtml5, DiJavascript1, DiReact } fr
 import { BsFiletypeCss } from "react-icons/bs"
 import { SiCypress, SiJest, SiReactrouter, SiStyledcomponents, SiWebauthn } from "react-icons/si"
 import { TbBrandRedux } from "react-icons/tb"
+import { FiExternalLink } from "react-icons/fi"
 
 
 function Stack(props) {
@@ -28,28 +29,28 @@ function Stack(props) {
                             <div className="divUl">
                                 <h4 title="click for examples">Application Libraries</h4>
                                 <div className="relative">
-                                    <li><DiReact style={{ color: "rgb(157, 43, 233)" }} />React</li>
+                                    <li><DiReact style={{ color: "rgb(157, 43, 233)" }}/><a target = "_blank" href = "https://github.com/JL1172/Stock-Market-Trading-App">React <FiExternalLink/></a></li>
                                 </div>
                             </div>
                             <div className="divUl">
                                 <h4>Styling</h4>
                                 <div className="relative">
-                                    <li><DiBootstrap style={{ color: "rgb(157, 43, 233)" }} />Bootstrap</li>
+                                    <li><DiBootstrap style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/React-Form-Playground">Bootstrap <FiExternalLink/></a></li>
                                 </div>
                                 <div className="relative">
-                                    <li>Reactstrap</li>
+                                    <li><a target = "_blank" href = "https://github.com/JL1172/React-Form-Playground">Reactstrap <FiExternalLink/></a></li>
                                 </div>
                                 <div className="relative">
-                                    <li className="case2"><SiStyledcomponents style={{ color: "rgb(157, 43, 233)" }} />Styled-Components</li>
+                                    <li className="case2"><SiStyledcomponents style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/React-Form-Playground">Styled-Components <FiExternalLink/></a></li>
                                 </div>
                             </div>
                             <div className="divUl">
                                 <h4>Supplementary Libraries</h4>
                                 <span className="relative">
-                                    <li><SiReactrouter style={{ color: "rgb(157, 43, 233)" }} />React-Router</li>
+                                    <li><SiReactrouter style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/React-Form-Playground">React-Router <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li><TbBrandRedux style={{ color: "rgb(157, 43, 233)" }} />Redux</li>
+                                    <li><TbBrandRedux style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/Stock-Market-Trading-App">Redux <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
                                     <li>Middleware</li>
@@ -58,7 +59,7 @@ function Stack(props) {
                             <div className="divUl">
                                 <h4>Testing</h4>
                                 <span className="relative">
-                                    <li><SiCypress style={{ color: "rgb(157, 43, 233)" }} />Cypress.io</li>
+                                    <li><SiCypress style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/Tests-Cypress--using-Cypress.io">Cypress.io <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
                                     <li className="special"><SiJest style={{ color: "rgb(157, 43, 233)" }} />Jest & React Testing Library</li>
@@ -67,19 +68,19 @@ function Stack(props) {
                             <div className="divUl">
                                 <h4>Other</h4>
                                 <span className="relative">
-                                    <li> <DiJavascript1 style={{ color: "rgb(157, 43, 233)" }} /> JavaScript</li>
+                                    <li> <DiJavascript1 style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/Calculator">JavaScript <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li><BsFiletypeCss style={{ color: "rgb(157, 43, 233)" }} />CSS</li>
+                                    <li><BsFiletypeCss style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/SpotifyLogin">CSS <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li><DiHtml5 style={{ color: "rgb(157, 43, 233)" }} />HTML</li>
+                                    <li><DiHtml5 style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/SpotifyLogin">HTML <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li><DiGithubBadge style={{ color: "rgb(157, 43, 233)" }} />Git/Github</li>
+                                    <li><DiGithubBadge style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href= "https://github.com/JL1172">Git/Github <FiExternalLink/></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li className="special case"><SiWebauthn style={{ color: "rgb(157, 43, 233)" }} />Authentication and Authorization</li>
+                                    <li className="special case"><SiWebauthn style={{ color: "rgb(157, 43, 233)" }} /><a target = "_blank" href = "https://github.com/JL1172/Authentication-Practice">Authentication and Authorization <FiExternalLink/></a></li>
                                 </span>
                             </div>
                         </ul>

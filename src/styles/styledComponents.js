@@ -773,8 +773,8 @@ from, to {border-right : 1px solid transparent}
 export const AboutMe = styled.div`
     color : gray;
     height : 40rem;
-    min-width : 10rem;
-    max-width : 95rem;
+
+    width : 100vw;
     margin-top : 12.95rem;
     background-color :rgb(24, 21, 21);
     display : flex;
