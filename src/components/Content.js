@@ -2,13 +2,15 @@ import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
 import About from "./About";
-import { fetchDataSuccess, rootAboutVisible, toggleStackVisibility } from "./actions/aboutMeAction";
+import { fetchDataSuccess, rootAboutVisible, toggleContactVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
 import Stack from "./Stack";
+import ContactForm from "./ContactForm";
 
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv visible={props.menuVisibility} aboutVisible={props.aboutIsVisible} stackVisible = {props.stackRootVisible}>
+            <ContentDiv contactRootVisible = {props.contactRootVisible} 
+            visible={props.menuVisibility} aboutVisible={props.aboutIsVisible} stackVisible = {props.stackRootVisible}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
                         circle
@@ -80,7 +82,7 @@ function Content(props) {
                         <span className="material-symbols-outlined line line4">
                             horizontal_rule
                         </span>
-                        <div id="contact"><span className="material-symbols-outlined">
+                        <div id="contact" onClick={()=> props.toggleContactVisibility()}><span className="material-symbols-outlined">
                             link
                         </span>Contact</div>
 
@@ -113,6 +115,7 @@ function Content(props) {
             </ContentDiv  >
             {props.aboutIsVisible && <About />}
             {props.stackRootVisible && <Stack/>}
+            {props.contactRootVisible && <ContactForm />}
         </div>
     )
 }
@@ -121,6 +124,7 @@ const mapStateToProps = state => {
         menuVisibility: state.headerState,
         aboutIsVisible: state.aboutMeState.rootVisible,
         stackRootVisible : state.aboutMeState.stackRootVisible,
+        contactRootVisible : state.aboutMeState.contactRootVisible,
     }
 }
-export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility })(Content);
+export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility, toggleContactVisibility })(Content);

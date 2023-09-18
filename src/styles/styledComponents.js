@@ -741,7 +741,7 @@ export const HeaderDiv = styled.div`
   display : flex;
   justify-content : space-between;
   align-items : center;
-  width  :100%;
+  width  :99vw;
   height : 7rem;
   z-index : 2;
   flex-basis : 100px;
@@ -845,25 +845,22 @@ from, to {border-right : 1px solid transparent}
 `
 export const AboutMe = styled.div`
     color : gray;
-    height : 40rem;
-
-    width : 99vw;
+    height : fit-content;
+    width : 98vw;
     margin-top : 12.95rem;
     background-color :rgb(24, 21, 21);
     display : flex;
     height : fit-content;
     justify-content : center;
-    align-items : baseline;
+    align-items : center;
     box-shadow : 0 0 2em rgb(24, 21, 21);
     opacity : 0;
     transition : .3s;
-    padding-right : 3rem;
     transform : translatex(-100%); 
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
     animation-delay : 1.4s;
-    z-index : 2;
     `}
     h1 {
         color :  aquamarine;
@@ -878,22 +875,17 @@ export const AboutMe = styled.div`
      margin-top : 1rem;
      line-height : 3rem;  
      box-shadow : 0 0 1em rgb(61, 41, 41);;
-     width : 100%;
+     width : 91vw;
      padding : 1rem;
-     overflow : hidden;
      display :flex;
-     justify-content :flex-start;
+     justify-content : flex-end;
      color : white;
      position : relative;
-    }
-    .colorWords {
-        color : aquamarine; 
     }
 #blinking::before {
     content : "";
     position : sticky;
     border : 1px solid white;
-    top : .5rem;
     width : 1rem;
     animation : ${blink} 1s infinite;
     animation-delay : 12s;

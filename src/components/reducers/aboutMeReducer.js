@@ -1,4 +1,4 @@
-import { FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE } from "../actions/aboutMeAction"
+import { FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE, TOGGLE_CONTACT_VISIBILITY } from "../actions/aboutMeAction"
 
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
     rootVisible : false,
     stackRootVisible : false,
     cvRootVisible : false,
-    contactRootVisible : false,
+    contactRootVisible : true,
     projectsRootVisible : false,
     frontEndVisible : false,
     backEndVisible : false,
@@ -31,6 +31,9 @@ export const aboutMeReducer = (state = initialState, action) => {
                 stackRootVisible : !state.stackRootVisible})
         case(TOGGLE_ACTIVE) : 
             return({...state, frontEndVisible : action.payload, backEndVisible : !action.payload })
+        case(TOGGLE_CONTACT_VISIBILITY) : 
+            return({...state, frontEndVisible : false, backEndVisible : false,
+                cvRootVisible : false, projectsRootVisible : false, contactRootVisible : true, stackRootVisible : false, rootVisible : false})
         default :
             return(state); 
     }
