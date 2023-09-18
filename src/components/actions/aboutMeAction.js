@@ -5,6 +5,7 @@ export const PUT_DATA_IN_STATE = "PUT_DATA_IN_STATE";
 export const ROOT_ABOUT_VISIBLE = "ROOT_ABOUT_VISIBLE"; 
 export const ROOT_STACK_VISIBLE = "ROOT_STACK_VISIBLE"; 
 export const TOGGLE_ACTIVE = "TOGGLE_ACTIVE"; 
+export const TOGGLE_CONTACT_VISIBILITY = "TOGGLE_CONTACT_VISIBILITY"; 
 
 export const fetchDataSuccess = () => dispatch => {
     dispatch(rootAboutVisible())
@@ -29,7 +30,7 @@ const rootAboutVisible = () => {
     return {type : ROOT_ABOUT_VISIBLE}
 }
 
-
+//!stack
 
 export const toggleStackVisibility = () => {
     return{type : ROOT_STACK_VISIBLE}
@@ -37,4 +38,12 @@ export const toggleStackVisibility = () => {
 
 export const toggleActive = (bool) => {
     return {type : TOGGLE_ACTIVE, payload : bool};
+}
+
+//!end of stack
+
+//!contact
+
+export const toggleContactVisibility = () => {
+    return {type : TOGGLE_CONTACT_VISIBILITY}
 }
