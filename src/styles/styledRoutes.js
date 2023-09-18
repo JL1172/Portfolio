@@ -92,6 +92,7 @@ export const StyledStack = styled.div`
             text-align  :center;
             padding-top : 2rem;
             padding-bottom : 1rem;
+            color : rgb(157, 43, 233);
             border-bottom  : 2px solid gray;
             width : 90vw;
         img {
@@ -114,6 +115,7 @@ export const StyledStack = styled.div`
         flex-basis : 100px;
         flex-wrap  :wrap;
         margin : 1rem;
+        border-bottom : 1px solid gray;
         a {
             text-decoration : none;
             color : inherit;
@@ -164,10 +166,12 @@ export const StyledStack = styled.div`
     }
     .divUl {
         display : flex;
-        margin-top  : 2rem;
+        padding-top  : 2rem;
+        padding-right : 1rem;
         flex-direction : column;
         justify-content : baseline;
         align-items : baseline;
+        padding-bottom : 3rem;
     }
 .relative {
     position : relative;
@@ -186,5 +190,9 @@ export const StyledStack = styled.div`
         flex-direction : column;
         align-items : center;
     }
+}
+h4 {
+    border-bottom : 1px solid gray;
+    color : rgb(157, 43, 233);
 }
 `
