@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { schema } from "../formSchema/schema";
 import * as yup from "yup";  
+import { useLoaderData } from "react-router-dom";
+import { useLocalStorage } from "./useLocalStorage";
 
 export const initialState = {
     fname : "",
@@ -15,7 +17,7 @@ export const initialStateForStatus = {
     info : {error : false, msg : null},
 }
 export const useForm = (initialState, initialStateForStatus, key) => {
-    const [data,setData] = useState(initialState);
+    const [data,setData] = useLocalStorage(initialState,key);
     const [status,setStatus] = useState(initialStateForStatus); 
     const [disabled,setDisabled] = useState(true); 
     const [errorData,setErrorData] = useState({
@@ -48,18 +50,19 @@ export const useForm = (initialState, initialStateForStatus, key) => {
         .then(()=> {
             setStatus(initialStateForStatus)
             setShowMessage(true);
-            setStatus({...status, [status.info.msg] : "Thanks for reaching out, I will be in contact soon!"})
+            setStatus({...status, info : {...status.info, msg : "Thanks for reaching out, I will be in contact soon!"}})
         })
         .catch(err=> {
             setShowMessage(true);
             setStatus({...status, [status.info.msg] : err.message})
         })
         .finally(()=> {
-           setData(initialState) 
+           setData(initialState);
         } )
     }
 
     const closeShowMessage = () => {
+        window.localStorage.clear();
         setStatus(initialStateForStatus);
         setShowMessage(false); 
     }
