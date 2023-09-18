@@ -8,7 +8,7 @@ const initialState = {
     rootVisible : false,
     stackRootVisible : false,
     cvRootVisible : false,
-    contactRootVisible : true,
+    contactRootVisible : false,
     projectsRootVisible : false,
     frontEndVisible : false,
     backEndVisible : false,
@@ -33,7 +33,7 @@ export const aboutMeReducer = (state = initialState, action) => {
             return({...state, frontEndVisible : action.payload, backEndVisible : !action.payload })
         case(TOGGLE_CONTACT_VISIBILITY) : 
             return({...state, frontEndVisible : false, backEndVisible : false,
-                cvRootVisible : false, projectsRootVisible : false, contactRootVisible : true, stackRootVisible : false, rootVisible : false})
+                cvRootVisible : false, projectsRootVisible : false, contactRootVisible : !state.contactRootVisible, stackRootVisible : false, rootVisible : false})
         default :
             return(state); 
     }
