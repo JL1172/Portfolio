@@ -109,6 +109,44 @@ export const StyledStack = styled.div`
     }
     li {
         list-style : circle;
+        margin-bottom : 1rem;
+        &:hover {
+            color : white;
+        }
+    }
+    li::before {
+        content : "";
+        position : absolute;
+        border-bottom : 1px solid rgb(157, 43, 233);
+        transform-origin : left;
+        opacity : 0;
+        width : 1em;
+        top : 1.3rem;
+    }
+    li:hover::before {
+        transform  : scaleX(1000%); 
+        opacity : 1;
+    }
+    .special::before {
+        content : "";
+        position : absolute;
+        border-bottom : 1px solid rgb(157, 43, 233);
+        transform-origin : left;
+        opacity : 0;
+        width : 1em;
+        top : 1.3rem;
+    }
+    .special:hover::before {
+        transform  : scaleX(1500%); 
+        opacity : 1;
+    }
+    .case:hover::before {
+        transform  : scaleX(1850%); 
+        opacity : 1;
+    }
+    .case2:hover::before {
+        transform  : scaleX(1200%); 
+        opacity : 1;
     }
     .divUl {
         display : flex;
@@ -117,6 +155,8 @@ export const StyledStack = styled.div`
         justify-content : baseline;
         align-items : baseline;
     }
-
+.relative {
+    position : relative;
+}
 
 `
