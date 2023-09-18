@@ -6,7 +6,7 @@ const initialState = {
     profile_information : [],
     loading : false,
     rootVisible : false,
-    stackRootVisible : true,
+    stackRootVisible : false,
     cvRootVisible : false,
     contactRootVisible : false,
     projectsRootVisible : false,

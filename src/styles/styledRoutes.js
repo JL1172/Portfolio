@@ -30,7 +30,7 @@ export const StyledStack = styled.div`
     animation : ${aboutRight} .6s ease-in-out forwards; 
     animation-delay : 1.4s;`}
     padding-left : 1rem;
-    width : 98vw;
+    width : 99vw;
     #headingStack {
         margin : 1%;
         display : flex;
@@ -73,7 +73,7 @@ export const StyledStack = styled.div`
     #back {
         margin-left : 3%;
     }
-    #body1 {
+    .body1 {
         display : flex;
         margin-bottom : 4rem;
         box-shadow : 0 0 2em rgb(19, 16, 16);
@@ -164,5 +164,19 @@ export const StyledStack = styled.div`
 .relative {
     position : relative;
 }
-
+.backendDiv {
+    width : 99vw;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    align-content : space-evenly;
+    justify-content : center;
+    margin-bottom : 4rem; 
+    .backDiv {
+        margin-top : 2rem;
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+    }
+}
 `

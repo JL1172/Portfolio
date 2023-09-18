@@ -774,7 +774,7 @@ export const AboutMe = styled.div`
     color : gray;
     height : 40rem;
 
-    width : 100vw;
+    width : 99vw;
     margin-top : 12.95rem;
     background-color :rgb(24, 21, 21);
     display : flex;
