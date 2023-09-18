@@ -1,5 +1,7 @@
 import axios from "axios";
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { schema } from "../formSchema/schema";
+import * as yup from "yup";  
 
 export const initialState = {
     fname : "",
@@ -15,10 +17,28 @@ export const initialStateForStatus = {
 export const useForm = (initialState, initialStateForStatus, key) => {
     const [data,setData] = useState(initialState);
     const [status,setStatus] = useState(initialStateForStatus); 
-    const [errorData,setErrorData] = useState(""); 
+    const [disabled,setDisabled] = useState(true); 
+    const [errorData,setErrorData] = useState({
+        fname : "",
+        lname : "",
+        email : "",
+        message : "",
+    }); 
     const [showMessage,setShowMessage] = useState(false)
 
+    useEffect(()=> {
+        schema.isValid(data).then(valid=> setDisabled(!valid))
+    },[data])
+
+    const formFieldValidation = (name,value) => {
+        yup.reach(schema,name).validate(value).then(()=> 
+        setErrorData({...errorData, [name] : ""})
+        )
+        .catch(err=> setErrorData({...errorData, [name] : err.errors[0]}))
+    }
+
     const changeHandler = (name,value) => {
+        formFieldValidation(name,value);
         setData({...data, [name] : value});
     }
     const submissionHandler = (e) => {
@@ -43,5 +63,6 @@ export const useForm = (initialState, initialStateForStatus, key) => {
         setStatus(initialStateForStatus);
         setShowMessage(false); 
     }
-    return [data,changeHandler,submissionHandler,status,showMessage,closeShowMessage]
+
+    return [data,changeHandler,submissionHandler,status,showMessage,closeShowMessage,errorData,disabled]
 }
