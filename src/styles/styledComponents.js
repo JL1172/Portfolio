@@ -11,6 +11,15 @@ const routeLine = keyframes`
     transform : scaleY(30000%); 
 }
 `
+const routeLine2 = keyframes`
+0% {
+
+}
+100% {
+    opacity : .6;
+    transform : scaleY(28000%); 
+}
+`
 const xLine = keyframes`
 0% {
 
@@ -54,7 +63,7 @@ background-color: rgb(31, 25, 25);
 display : flex;
 flex-direction : column;
 justify-content : flex-start;
-width : 100%;
+width : 100vw;
 min-height : 125rem;
 min-width : 15rem;
 max-width : 100%;
@@ -414,6 +423,8 @@ div:nth-child(12) {
 }
 .routes {
     margin-top : 2rem;
+    
+    cursor: pointer;
     display : flex;
     flex-direction : column;
     flex-basis : 200px;
@@ -658,7 +669,69 @@ div:nth-child(12) {
     `
     }
 }
+
+
+.thirdRoute::after {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 12.5rem;
+        bottom : 15.2rem;
+        opacity : 0;
+        transform-origin : left;
+        ${props => props.stackVisible && 
+        css`
+        animation : ${xLine} .4s ease-in-out forwards;
+        `}
+    }
+.fourthRoute::after {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 15.5rem;
+        bottom : 15.2rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props => 
+        props.stackVisible && 
+        css`        
+        animation : ${routeLine2} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+        }
+}
+.move-y2 {
+    position : absolute;
+    left : 14.8rem;
+    bottom : 14.5rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.stackVisible && 
+    css`
+    animation : ${slideONY} 1s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
+.move-x2 {
+    position : absolute;
+    border-radius : 10rem;
+    top :4.5rem;
+    left : 11.7rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.stackVisible && 
+    css`
+    animation : ${slideOnX} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
+}
 `
+
 
 //!header
 export const HeaderDiv = styled.div`
@@ -773,8 +846,8 @@ from, to {border-right : 1px solid transparent}
 export const AboutMe = styled.div`
     color : gray;
     height : 40rem;
-    min-width : 10rem;
-    max-width : 95rem;
+
+    width : 99vw;
     margin-top : 12.95rem;
     background-color :rgb(24, 21, 21);
     display : flex;
