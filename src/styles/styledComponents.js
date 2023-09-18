@@ -54,7 +54,7 @@ background-color: rgb(31, 25, 25);
 display : flex;
 flex-direction : column;
 justify-content : flex-start;
-width : 100%;
+width : 100vw;
 min-height : 125rem;
 min-width : 15rem;
 max-width : 100%;

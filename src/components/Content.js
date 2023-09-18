@@ -2,7 +2,8 @@ import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
 import About from "./About";
-import { fetchDataSuccess, rootAboutVisible } from "./actions/aboutMeAction";
+import { fetchDataSuccess, rootAboutVisible, toggleStackVisibility } from "./actions/aboutMeAction";
+import Stack from "./Stack";
 
 function Content(props) {
     return (
@@ -67,7 +68,7 @@ function Content(props) {
                         <span className="material-symbols-outlined line line2">
                             horizontal_rule
                         </span>
-                        <div id="skills"><span className="material-symbols-outlined">
+                        <div  onClick={()=> props.toggleStackVisibility()} id="skills"><span className="material-symbols-outlined">
                             terminal
                         </span>Stack</div>
                         <span className="material-symbols-outlined line line3">
@@ -97,6 +98,8 @@ function Content(props) {
                         </span>
                         <span className="firstRoute"></span>
                         <span className="secondRoute"></span>
+                        <span className="thirdRoute"></span>
+                        <span className="fourthRoute"></span>
                     </section>
                     <span id="circle3" className="material-symbols-outlined">
                         circle
@@ -104,6 +107,7 @@ function Content(props) {
                 </main>
             </ContentDiv  >
             {props.aboutIsVisible && <About />}
+            {props.stackRootVisible && <Stack/>}
         </div>
     )
 }
@@ -111,6 +115,7 @@ const mapStateToProps = state => {
     return {
         menuVisibility: state.headerState,
         aboutIsVisible: state.aboutMeState.rootVisible,
+        stackRootVisible : state.aboutMeState.stackRootVisible,
     }
 }
-export default connect(mapStateToProps, { fetchDataSuccess })(Content);
+export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility })(Content);
