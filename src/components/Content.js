@@ -8,7 +8,7 @@ import Stack from "./Stack";
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv visible={props.menuVisibility} aboutVisible={props.aboutIsVisible}>
+            <ContentDiv visible={props.menuVisibility} aboutVisible={props.aboutIsVisible} stackVisible = {props.stackRootVisible}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
                         circle
@@ -94,6 +94,11 @@ function Content(props) {
                         <span className="material-symbols-outlined move-x">
                             circle
                         </span><span className="material-symbols-outlined move-y">
+                            circle
+                        </span>
+                        <span  className="material-symbols-outlined move-x2">
+                            circle
+                        </span><span className="material-symbols-outlined move-y2">
                             circle
                         </span>
                         <span className="firstRoute"></span>

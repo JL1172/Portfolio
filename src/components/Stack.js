@@ -19,7 +19,7 @@ function Stack(props) {
                 </div>
                 <div id="subHeading">
                     <div onClick={() => props.toggleActive(true)} className={props.frontend ? "tabs active" : "tabs"} id="front">frontEnd.js</div>
-                    <div onClick={() => props.toggleActive()} className={props.backend ? "tabs active " : "tabs"} id="back">backEnd.js</div>
+                    <div onClick={() => props.toggleActive(false)} className={!props.frontend ? "tabs " : "tabs active"} id="back">backEnd.js</div>
                 </div>
             </div>
             <div className="body1">
@@ -39,11 +39,14 @@ function Stack(props) {
                                     <li><DiBootstrap style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Bootstrap <FiExternalLink /></a></li>
                                 </div>
                                 <div className="relative">
-                                    <li><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Reactstrap <FiExternalLink /></a></li>
+                                    <li><DiReact style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Reactstrap <FiExternalLink /></a></li>
                                 </div>
                                 <div className="relative">
                                     <li className="case2"><SiStyledcomponents style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Styled-Components <FiExternalLink /></a></li>
                                 </div>
+                                <span className="relative">
+                                    <li><BsFiletypeCss style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/SpotifyLogin">CSS <FiExternalLink /></a></li>
+                                </span>
                             </div>
                             <div className="divUl">
                                 <h4>Supplementary Libraries</h4>
@@ -54,7 +57,7 @@ function Stack(props) {
                                     <li><TbBrandRedux style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/Stock-Market-Trading-App">Redux <FiExternalLink /></a></li>
                                 </span>
                                 <span className="relative">
-                                    <li>Middleware</li>
+                                    <li><TbBrandRedux style={{ color: "rgb(157, 43, 233)" }} />Middleware</li>
                                 </span>
                             </div>
                             <div className="divUl">
@@ -70,9 +73,6 @@ function Stack(props) {
                                 <h4>Other</h4>
                                 <span className="relative">
                                     <li> <DiJavascript1 style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/Calculator">JavaScript <FiExternalLink /></a></li>
-                                </span>
-                                <span className="relative">
-                                    <li><BsFiletypeCss style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/SpotifyLogin">CSS <FiExternalLink /></a></li>
                                 </span>
                                 <span className="relative">
                                     <li><DiHtml5 style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/SpotifyLogin">HTML <FiExternalLink /></a></li>
@@ -103,7 +103,7 @@ function Stack(props) {
                                 <p>RESTful apis coming soon...</p>
                             </div>
                     </div>}
-            </div>
+            </div><h1 style = {{display : "flex", alignSelf : "flex-start"}}>{"}"}</h1>
         </StyledStack>
     )
 }
@@ -113,8 +113,6 @@ const mapStateToProps = state => {
         stackRootVisible: state.aboutMeState.stackRootVisible,
         frontend: state.aboutMeState.frontEndVisible,
         backend: state.aboutMeState.backEndVisible,
-
-
     }
 }
 export default connect(mapStateToProps, { toggleActive })(Stack);

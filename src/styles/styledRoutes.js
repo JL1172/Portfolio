@@ -9,7 +9,15 @@ const aboutRight = keyframes`
     opacity : 1;
 }
 `
+const kf = keyframes`
+0% {
 
+}
+100% {
+    opacity : .6;
+    transform : scaleY(30000%); 
+}
+`
 
 export const StyledStack = styled.div`
     color : gray;
@@ -28,7 +36,7 @@ export const StyledStack = styled.div`
     transform-origin : left;
     ${props => props.stackRootVisible && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
-    animation-delay : 1.4s;`}
+    animation-delay : .6s;`}
     padding-left : 1rem;
     width : 99vw;
     #headingStack {

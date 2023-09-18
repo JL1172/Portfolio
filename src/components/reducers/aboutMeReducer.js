@@ -24,7 +24,7 @@ export const aboutMeReducer = (state = initialState, action) => {
             return({...state, rootVisible : !state.rootVisible, cvRootVisible : false,
                  projectsRootVisible : false,
                 contactRootVisible : false,
-                stackRootVisible : !state.stackRootVisible}); 
+                stackRootVisible : false}); 
         case(ROOT_STACK_VISIBLE) : 
             return({...state, rootVisible : false, cvRootVisible : false, projectsRootVisible : false,
                 contactRootVisible : false,
