@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {keyframes, css} from "styled-components";
+import { keyframes, css } from "styled-components";
 
 //!main page
 const routeLine = keyframes`
@@ -12,6 +12,15 @@ const routeLine = keyframes`
 }
 `
 const routeLine2 = keyframes`
+0% {
+
+}
+100% {
+    opacity : .6;
+    transform : scaleY(28000%); 
+}
+`
+const routeLine3 = keyframes`
 0% {
 
 }
@@ -57,7 +66,15 @@ const slideOnX = keyframes`
     opacity : 0;
 }
 `
-
+const slideOnX2 = keyframes`
+0% {
+    opacity : 1;
+}
+100% {
+    transform : translateX(200%); 
+    opacity : 0;
+}
+`
 export const MainPage = styled.div`
 background-color: rgb(31, 25, 25);
 display : flex;
@@ -169,7 +186,7 @@ const lineSlide = keyframes`
 export const ContentDiv = styled.div`
 display : flex;
 flex-direction : column;
-filter : ${props=> props.visible ? "brightness(25%)" : ""}; 
+filter : ${props => props.visible ? "brightness(25%)" : ""}; 
 transition : filter .3s ease-in-out;
 width : 50rem;
 min-width : 50%;
@@ -616,13 +633,13 @@ div:nth-child(12) {
         bottom : 19.2rem;
         transform-origin : top;
         opacity : 0;
-        ${props => 
-        props.aboutVisible && 
+        ${props =>
+        props.aboutVisible &&
         css`        
         animation : ${routeLine} .4s ease-in-out forwards;
         animation-delay : .6s;
         `
-        }
+    }
     }
 .secondRoute::after {
     content : "";
@@ -632,12 +649,12 @@ div:nth-child(12) {
         bottom : 19.2rem;
         transform-origin : left;
         opacity : 0;
-        ${props => 
-        props.aboutVisible && 
+        ${props =>
+        props.aboutVisible &&
         css`    
         animation : ${xLine} .4s ease-in-out forwards;
         `
-        }
+    }
 }
 .move-y {
     position : absolute;
@@ -647,8 +664,8 @@ div:nth-child(12) {
     border-radius : 10rem;
     box-shadow : 0 0 1em aquamarine;
     color : aquamarine;
-    ${props => props.aboutVisible && 
-    css`
+    ${props => props.aboutVisible &&
+        css`
     animation : ${slideONY} 1.6s ease-in-out forwards;
     animation-delay : .6s;
     `
@@ -662,8 +679,8 @@ div:nth-child(12) {
     opacity : 0;
     color : aquamarine;
     box-shadow : 0 0 1em aquamarine;
-    ${props => props.aboutVisible && 
-    css`
+    ${props => props.aboutVisible &&
+        css`
     animation : ${slideOnX} .7s ease-in-out forwards;
     animation-delay : .2s;
     `
@@ -679,7 +696,7 @@ div:nth-child(12) {
         bottom : 15.2rem;
         opacity : 0;
         transform-origin : left;
-        ${props => props.stackVisible && 
+        ${props => props.stackVisible &&
         css`
         animation : ${xLine} .4s ease-in-out forwards;
         `}
@@ -692,13 +709,13 @@ div:nth-child(12) {
         bottom : 15.2rem;
         transform-origin : top;
         opacity : 0;
-        ${props => 
-        props.stackVisible && 
+        ${props =>
+        props.stackVisible &&
         css`        
         animation : ${routeLine2} .4s ease-in-out forwards;
         animation-delay : .6s;
         `
-        }
+    }
 }
 .move-y2 {
     position : absolute;
@@ -708,8 +725,8 @@ div:nth-child(12) {
     border-radius : 10rem;
     box-shadow : 0 0 1em aquamarine;
     color : aquamarine;
-    ${props => props.stackVisible && 
-    css`
+    ${props => props.stackVisible &&
+        css`
     animation : ${slideONY} 1s ease-in-out forwards;
     animation-delay : .6s;
     `
@@ -723,10 +740,70 @@ div:nth-child(12) {
     opacity : 0;
     color : aquamarine;
     box-shadow : 0 0 1em aquamarine;
-    ${props => props.stackVisible && 
-    css`
+    ${props => props.stackVisible &&
+        css`
     animation : ${slideOnX} .7s ease-in-out forwards;
     animation-delay : .2s;
+    `
+    }
+}
+
+.fifthRoute::after {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 16.5rem;
+        bottom : 7.1rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props =>
+        props.contactRootVisible &&
+        css`        
+        animation : ${routeLine3} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+    }
+}
+.sixthRoute::after {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 13.5rem;
+        bottom : 7.1rem;
+        opacity : 0;
+        transform-origin : left;
+        ${props => props.contactRootVisible &&
+        css`
+        animation : ${xLine} .4s ease-in-out forwards;
+        `}
+}
+.move-x3 {
+    position : absolute;
+    border-radius : 10rem;
+    bottom : 6.45rem;
+    left : 13.4rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.contactRootVisible &&
+        css`
+    animation : ${slideOnX2} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
+}
+.move-y3 {
+    position : absolute;
+    left : 15.8rem;
+    bottom : 6.45rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.contactRootVisible &&
+        css`
+    animation : ${slideONY} 1s ease-in-out forwards;
+    animation-delay : .6s;
     `
     }
 }
@@ -787,8 +864,8 @@ export const ToggleBar = styled.div`
         border-bottom : 2px solid rgb(61, 41, 41);
         transform : scaleX(0); 
         background-color :rgb(24, 21, 21);
-        ${props => 
-        props.menuVisible && 
+        ${props =>
+        props.menuVisible &&
         css`
         animation : ${sideBar} .5s ease-in-out forwards;
         ` }
