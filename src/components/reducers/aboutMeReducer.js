@@ -1,4 +1,4 @@
-import { FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE, TOGGLE_CONTACT_VISIBILITY, TOGGLE_CV_VISIBILITY } from "../actions/aboutMeAction"
+import { ACTIVATE_PROJECT, FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE, TOGGLE_CONTACT_VISIBILITY, TOGGLE_CV_VISIBILITY, TOGGLE_PROJECT_VISIBILITY } from "../actions/aboutMeAction"
 
 
 const initialState = {
@@ -12,6 +12,9 @@ const initialState = {
     projectsRootVisible : false,
     frontEndVisible : false,
     backEndVisible : false,
+
+    activeProject : "",
+    deactivateProject : false,
 }
 
 export const aboutMeReducer = (state = initialState, action) => {
@@ -37,6 +40,12 @@ export const aboutMeReducer = (state = initialState, action) => {
         case(TOGGLE_CV_VISIBILITY) :
             return({...state, frontEndVisible : false, backEndVisible : false,
                 cvRootVisible : !state.cvRootVisible, projectsRootVisible : false, contactRootVisible :false, stackRootVisible : false, rootVisible : false})
+        case(TOGGLE_PROJECT_VISIBILITY) :
+            return({...state,frontEndVisible : false, backEndVisible : false,
+                cvRootVisible : false, projectsRootVisible : !state.projectsRootVisible, contactRootVisible :false, stackRootVisible : false, rootVisible : false})
+        case(ACTIVATE_PROJECT) :
+            
+            return({...state, activeProject :action.payload})
         default :
             return(state); 
     }

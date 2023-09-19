@@ -6,8 +6,12 @@ export const ROOT_ABOUT_VISIBLE = "ROOT_ABOUT_VISIBLE";
 export const ROOT_STACK_VISIBLE = "ROOT_STACK_VISIBLE"; 
 export const TOGGLE_ACTIVE = "TOGGLE_ACTIVE"; 
 export const TOGGLE_CONTACT_VISIBILITY = "TOGGLE_CONTACT_VISIBILITY"; 
+export const TOGGLE_PROJECT_VISIBILITY = "TOGGLE_PROJECT_VISIBILITY";
 
 export const TOGGLE_CV_VISIBILITY = "TOGGLE_CV_VISIBILITY"; 
+
+export const ACTIVATE_PROJECT = "ACTIVATE_PROJECT";
+export const DEACTIVATE_PROJECT = "DEACTIVATE_PROJECT"; 
 
 export const fetchDataSuccess = () => dispatch => {
     dispatch(rootAboutVisible())
@@ -55,4 +59,18 @@ export const toggleContactVisibility = () => {
 
 export const toggleCVVisibility = () => {
     return{type : TOGGLE_CV_VISIBILITY};
+}
+//!end of cv
+
+//!Project 
+
+export const toggleProjectVisibility = () => {
+    return{type : TOGGLE_PROJECT_VISIBILITY};
+}
+
+export const activateProject = (id) => {
+    return {type : ACTIVATE_PROJECT, payload : id};
+}
+export const deactivateProject = (id) => {
+    return{type :DEACTIVATE_PROJECT, payload : id}
 }
