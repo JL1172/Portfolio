@@ -637,7 +637,7 @@ div:nth-child(12) {
         props.aboutVisible &&
         css`        
         animation : ${routeLine} .4s ease-in-out forwards;
-        animation-delay : .6s;
+        animation-delay : .5s;
         `
     }
     }
@@ -652,7 +652,7 @@ div:nth-child(12) {
         ${props =>
         props.aboutVisible &&
         css`    
-        animation : ${xLine} .4s ease-in-out forwards;
+        animation : ${xLine} .3s ease-in-out forwards;
         `
     }
 }
@@ -666,7 +666,7 @@ div:nth-child(12) {
     color : aquamarine;
     ${props => props.aboutVisible &&
         css`
-    animation : ${slideONY} 1.6s ease-in-out forwards;
+    animation : ${slideONY} 1s ease-in-out forwards;
     animation-delay : .6s;
     `
     }
@@ -985,6 +985,7 @@ export const ToggleBar = styled.div`
         width : 15rem;
         transition : 2s ease-out; 
         transform-origin : left;
+        opacity : 0;
         border-right : 2px solid rgb(61, 41, 41);
         border-bottom : 2px solid rgb(61, 41, 41);
         transform : scaleX(0); 
@@ -1090,7 +1091,7 @@ export const AboutMe = styled.div`
     transform-origin : top;
     ${props => props.about && css`
     animation : ${aboutRight} .6s ease-in-out forwards; 
-    animation-delay : 1.4s;
+    animation-delay : 500ms;
     `}
     h1 {
         color :  aquamarine;

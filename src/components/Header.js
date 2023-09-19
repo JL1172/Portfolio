@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { HeaderDiv, ToggleBar } from "../styles/styledComponents";
-import { useMenu } from "./customHooks/useMenu";
+
 import { connect } from "react-redux";
-import { toggleTheMenu } from "./actions/headerActions";
-import { fetchDataSuccess, toggleCVVisibility, toggleContactVisibility, toggleProjectVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
+
+import { fetchDataSuccess, toggleCVVisibility, toggleContactVisibility, toggleProjectVisibility, toggleStackVisibility, toggleTheMenu } from "./actions/aboutMeAction";
 
 function Header(props) {
     return (
-        <HeaderDiv>
+        <HeaderDiv menuVisible={props.menuIsVisible}>
             <div id="menu" ><span onClick={() => props.toggleTheMenu()} id="menuIcon" className="material-symbols-outlined">
-                {props.menuVisibility ? "close" : "menu"}
+                {props.menuIsVisible ? "close" : "menu"}
             </span>
             <span id ="myHeaderName">{"<JacobLang>"}</span>
-                <ToggleBar menuVisible={props.menuVisibility}>
+                <ToggleBar menuVisible={props.menuIsVisible}>
                     <div className="toggledDiv">
-                        <a href = "#aAbout"><div onClick={() => props.fetchDataSuccess()} id="a1"><span className="material-symbols-outlined">
+                        <a href = "#aAbout2"><div onClick={() => props.fetchDataSuccess()} id="a1"><span className="material-symbols-outlined">
                             info
                         </span>About Me</div></a>
 
@@ -39,7 +39,7 @@ function Header(props) {
 
 const mapStateToProps = state => {
     return {
-        menuVisibility: state.headerState,
+        menuIsVisible : state.aboutMeState.menuIsVisible,
         aboutIsVisible: state.aboutMeState.rootVisible,
         stackRootVisible: state.aboutMeState.stackRootVisible,
         contactRootVisible: state.aboutMeState.contactRootVisible,
