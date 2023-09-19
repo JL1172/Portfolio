@@ -57,7 +57,7 @@ export const StyledProjects = styled.div`
         margin-top : 5rem;
         display : flex;
         min-height : 90vh;
-        border : 2px solid gray;
+        border : 2px solid rgb(61, 41, 41);
         padding : 1rem;
       height : fit-content;
       background-color : rgb(19, 16, 16);
@@ -77,7 +77,7 @@ export const StyledProjects = styled.div`
         flex-grow : 2;
         padding-top : 1rem;
         height : 5rem;
-        border : 2px solid gray;
+        border : 2px solid rgb(61, 41, 41);
         overflow : hidden;
         display :flex;
         margin-right : .7rem;
