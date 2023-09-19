@@ -74,9 +74,9 @@ export const StyledProjects = styled.div`
         display :flex;
         margin-right : .7rem;
         position : relative;
-        justify-content : center;
-        text-align : center;
-        
+        justify-content : flex-start;
+        align-items : center;
+        flex-direction : column;
     }
 }
 .activatedProject {
@@ -85,10 +85,10 @@ export const StyledProjects = styled.div`
             transition : .3s ease-in-out; 
             height :40vw !important;
             position : relative;
-            p {
+            .headings {
                 color : aquamarine;
             }
-            p::before {
+            .headings::before {
                 content : '';
                 position : absolute;
                 border : 1px solid aquamarine; 
@@ -112,5 +112,14 @@ export const StyledProjects = styled.div`
     height : 2rem;
     color : rgb(157, 43, 233);
 }
-
+.tightened {
+    margin-top : 1rem;
+    display : flex;
+    height  :40rem;
+    width : 15rem;
+    justify-content : flex-start;
+    align-items : flex-start;
+    overflow : auto;
+    overflow-x: hidden;
+}
 `

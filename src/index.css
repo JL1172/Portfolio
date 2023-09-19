@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth !important;
-  
 }
 a {
   text-decoration: none !important;

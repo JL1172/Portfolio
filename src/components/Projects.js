@@ -16,33 +16,46 @@ const Projects = (props) => {
                     className={props.activeProject === "Spotify Login Mock" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Spotify Login Mock" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Spotify Login Mock" && <BiLinkExternal className="iconLink" />}
-                    <p aria-label="1" >Spotify Login Mock </p>
-                    {props.deactivateProject === "Spotify Login Mock" && <p></p>}
+                    <span className="headings" aria-label="1" >Spotify Login Mock </span>
+                    <div className = "tightened" >
+                    {props.deactivateProject === "Spotify Login Mock" && <p>{descriptionsProject.spotify}</p>}
+                    </div>
                 </div>
                 <div onClick={(e) => props.activateProject(e.target.outerText)} id="2"
                     className={props.activeProject === "React Form Playground" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "React Form Playground" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "React Form Playground" && <BiLinkExternal className="iconLink" />}
-                    <p aria-label="2">React Form Playground </p>
+                    <span className="headings" aria-label="2">React Form Playground </span>
+                    <div className = "tightened">
+                    {props.deactivateProject === "React Form Playground" && <p>{descriptionsProject.form}</p>}
+                    </div>
                 </div>
                 <div onClick={(e) => props.activateProject(e.target.outerText)} id="3"
                     className={props.activeProject === "Stock Market Trading App" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Stock Market Trading App" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Stock Market Trading App" && <BiLinkExternal className="iconLink" />}
-                    <p aria-label="3">Stock Market Trading App </p>
+                    <span className="headings" aria-label="3">Stock Market Trading App </span>
+                    <div className = "tightened">
+                    {props.deactivateProject === "Stock Market Trading App" && <p>{descriptionsProject.stock}</p>}
+                    </div>
                 </div>
                 <div onClick={(e) => props.activateProject(e.target.outerText)} id="4"
                     className={props.activeProject === "Nasa Photo of The Day" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Nasa Photo of The Day" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Nasa Photo of The Day" && <BiLinkExternal className="iconLink" />}
-                    
-                    <p aria-label="4">Nasa Photo of The Day </p>
+                    <span className="headings" aria-label="4">Nasa Photo of The Day </span>
+                    <div className = "tightened">
+                    {props.deactivateProject === "Nasa Photo of The Day" && <p>{descriptionsProject.nasa}</p>}
+                    </div>
                 </div>
                 <div onClick={(e) => props.activateProject(e.target.outerText)} id="5"
                     className={props.activeProject === "Global Bank GDP Query" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject ===  "Global Bank GDP Query" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject ===  "Global Bank GDP Query" && <BiLinkExternal className="iconLink" />}
-                    <p aria-label="5">Global Bank GDP Query </p>
+                    <span className="headings" aria-label="5">Global Bank GDP Query </span>
+                    <div className = "tightened">
+                    {props.deactivateProject ===  "Global Bank GDP Query" && <p>{descriptionsProject.gdp}</p>}
+                    </div>
                 </div>
             </div>
         </StyledProjects>
