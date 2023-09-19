@@ -20,7 +20,7 @@ const Projects = (props) => {
                     className={props.activeProject === "Spotify Login Mock" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Spotify Login Mock" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Spotify Login Mock" &&  !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject === "Spotify Login Mock" && <BiLinkExternal className="iconLink" />}
+                    {props.deactivateProject === "Spotify Login Mock" && <a className="iconLink" href = "https://github.com/JL1172/SpotifyLogin"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="1" >Spotify Login Mock<DiJsBadge /> </span>
                     <div className = "tightened" >
                     {props.deactivateProject === "Spotify Login Mock" && <div style = {{position : "relative"}}>
@@ -37,7 +37,7 @@ const Projects = (props) => {
                     className={props.activeProject === "React Form Playground" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "React Form Playground" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "React Form Playground" &&  !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject === "React Form Playground" && <BiLinkExternal className="iconLink" />}
+                    {props.deactivateProject === "React Form Playground" && <a className="iconLink" href = "https://github.com/JL1172/React-Form-Playground" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="2">React Form Playground<DiJsBadge /> </span>
                     <div className = "tightened">
                     {props.deactivateProject === "React Form Playground" && <div style = {{position : "relative"}}>
@@ -54,7 +54,7 @@ const Projects = (props) => {
                     className={props.activeProject === "Stock Market Trading App" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Stock Market Trading App" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Stock Market Trading App" && !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject === "Stock Market Trading App" && <BiLinkExternal className="iconLink" />}
+                    {props.deactivateProject === "Stock Market Trading App" && <a className="iconLink" href = "https://github.com/JL1172/Stock-Market-Trading-App" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="3">Stock Market Trading App<DiJsBadge /> </span>
                     <div className = "tightened">
                     {props.deactivateProject === "Stock Market Trading App" &&<div style = {{position : "relative"}}>
@@ -71,7 +71,7 @@ const Projects = (props) => {
                     className={props.activeProject === "Nasa Photo of The Day" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "Nasa Photo of The Day" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Nasa Photo of The Day" &&  !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject === "Nasa Photo of The Day" && <BiLinkExternal className="iconLink" />}
+                    {props.deactivateProject === "Nasa Photo of The Day" && <a className="iconLink" href = "https://github.com/JL1172/NasaPhotoOfDayFetcher" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="4">Nasa Photo of The Day<DiJsBadge /> </span>
                     <div className = "tightened">
                     {props.deactivateProject === "Nasa Photo of The Day" && <div style = {{position : "relative"}}><p>{descriptionsProject.nasa}</p>
@@ -87,7 +87,7 @@ const Projects = (props) => {
                     className={props.activeProject === "Global Bank GDP Query" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject ===  "Global Bank GDP Query" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "Global Bank GDP Query" &&  !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject ===  "Global Bank GDP Query" && <BiLinkExternal className="iconLink" />}
+                    {props.deactivateProject ===  "Global Bank GDP Query" && <a className="iconLink" href = "https://github.com/JL1172/GlobalBankGDPQuery" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="5">Global Bank GDP Query<DiJsBadge /> </span>
                     <div className = "tightened">
                     {props.deactivateProject ===  "Global Bank GDP Query" && <div style={{position : "relative"}}><p>{descriptionsProject.gdp}</p>
