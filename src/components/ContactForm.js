@@ -28,11 +28,11 @@ function ContactForm(props) {
                     </div>
                     <div>
                         <div className="rows">
-                            <input type="text" className={errorData.fname && "incorrect"} placeholder="jacob" name="fname" id="fname" value={data.fname} onChange={(e) => changeHandler(e.target.name, e.target.value)} />
+                            <input type="text" className={errorData.fname && "incorrect"} placeholder="first name" name="fname" id="fname" value={data.fname} onChange={(e) => changeHandler(e.target.name, e.target.value)} />
                             {errorData.fname && <p className="incorrect">{errorData.fname}</p>}
                         </div>
                         <div className="rows">
-                            <input type="text" className={errorData.lname && "incorrect"} name="lname" id="lname" placeholder="lang" value={data.lname} onChange={(e) => changeHandler(e.target.name, e.target.value)} />
+                            <input type="text" className={errorData.lname && "incorrect"} name="lname" id="lname" placeholder="last name" value={data.lname} onChange={(e) => changeHandler(e.target.name, e.target.value)} />
                             {errorData.lname && <p className="incorrect">{errorData.lname}</p>}
                         </div>
                         <div className="rows">

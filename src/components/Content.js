@@ -2,15 +2,16 @@ import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
 import About from "./About";
-import { fetchDataSuccess, rootAboutVisible, toggleCVVisibility, toggleContactVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
+import { fetchDataSuccess, rootAboutVisible, toggleCVVisibility, toggleContactVisibility, toggleProjectVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
 import Stack from "./Stack";
 import ContactForm from "./ContactForm";
 import CV from "./CV";
+import Projects from "./Projects";
 
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv contactRootVisible = {props.contactRootVisible} 
+            <ContentDiv contactRootVisible = {props.contactRootVisible} cvRootVisible = {props.cvRootVisible} projectsRootVisible = {props.projectsRootVisible}
             visible={props.menuVisibility} aboutVisible={props.aboutIsVisible} stackVisible = {props.stackRootVisible}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
@@ -90,7 +91,7 @@ function Content(props) {
                         <span className="material-symbols-outlined line line56">
                             horizontal_rule
                         </span>
-                        <div id="projects"><span className="material-symbols-outlined">
+                        <div onClick={()=>props.toggleProjectVisibility()} id="projects"><span className="material-symbols-outlined">
                             stack
                         </span>Projects</div>
 
@@ -109,12 +110,19 @@ function Content(props) {
                         </span><span className="material-symbols-outlined move-y3">
                             circle
                         </span>
+                        <span  className="material-symbols-outlined move-x4">
+                            circle
+                        </span><span className="material-symbols-outlined move-y4">
+                            circle
+                        </span>
                         <span className="firstRoute"></span>
                         <span className="secondRoute"></span>
                         <span className="thirdRoute"></span>
                         <span className="fourthRoute"></span>
                         <span className="fifthRoute"></span>
                         <span className="sixthRoute"></span>
+                        <span className="seventhRoute"></span>
+                        <span className="eigthRoute"></span>
                     </section>
                     <span id="circle3" className="material-symbols-outlined">
                         circle
@@ -125,6 +133,7 @@ function Content(props) {
             {props.stackRootVisible && <Stack/>}
             {props.contactRootVisible && <ContactForm />}
             {props.cvRootVisible && <CV/>}
+            {props.projectsRootVisible && <Projects />}
         </div>
     )
 }
@@ -135,6 +144,7 @@ const mapStateToProps = state => {
         stackRootVisible : state.aboutMeState.stackRootVisible,
         contactRootVisible : state.aboutMeState.contactRootVisible,
         cvRootVisible : state.aboutMeState.cvRootVisible,
+        projectsRootVisible : state.aboutMeState.projectsRootVisible,
     }
 }
-export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility, toggleContactVisibility, toggleCVVisibility })(Content);
+export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility, toggleContactVisibility, toggleCVVisibility, toggleProjectVisibility })(Content);
