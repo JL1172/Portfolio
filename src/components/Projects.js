@@ -13,7 +13,7 @@ import { descriptionsProject } from "./data/descriptions";
 const Projects = (props) => {
     console.log(props.maxOrMin)
     return (
-        <StyledProjects projectsRootVisible={props.projectsRootVisible} maxOrMin = {props.maxOrMin}>
+        <StyledProjects id = "aProj" projectsRootVisible={props.projectsRootVisible} maxOrMin = {props.maxOrMin}>
             <h1>Projects</h1>
             <div id="outerDiv">
                 <div onClick={(e) => props.activateProject(e.target.outerText)} id="1"

@@ -868,8 +868,65 @@ left : 15rem;
     `
     }
 }
-
-
+.ninthRoute {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 16.7rem;
+        bottom : 3rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props =>
+        props.projectsRootVisible &&
+        css`        
+        animation : ${routeLine3} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+    }
+}
+.tenthRoute {
+    content : "";
+    position : absolute;
+    border : 1px solid aquamarine;
+        left : 13.7rem;
+        bottom : 3rem;
+        opacity : 0;
+        transform-origin : left;
+        ${props => props.projectsRootVisible &&
+        css`
+        animation : ${xLine} .4s ease-in-out forwards;
+        `}
+}
+.move-x5 {
+    position : absolute;
+    border-radius : 10rem;
+    bottom : 2.3rem;
+    left : 13.25rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.projectsRootVisible &&
+        css`
+    animation : ${slideOnX2} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
+}
+.move-y5 {
+    position : absolute;
+    left : 16rem;
+    bottom : 2.3rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.projectsRootVisible &&
+        css`
+    animation : ${slideONY} 1s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
 `
 
 
@@ -886,6 +943,11 @@ export const HeaderDiv = styled.div`
   z-index : 2;
   flex-basis : 100px;
   color : gray;
+  /* position : relative; */
+  #myHeaderName {
+    position : absolute;
+    left : 4rem;
+  }
   #menu {
     display : flex;
     justify-content : space-around;
@@ -913,13 +975,13 @@ const sideBar = keyframes`
 }
 100% {
     opacity : 1;
-    transform : scaleX(100%); 
+    transform : scaleX(110%); 
 }
 `
 export const ToggleBar = styled.div`
         position : absolute;
         top : 7rem;
-        height : 40rem;
+        height : 20rem;
         width : 15rem;
         transition : 2s ease-out; 
         transform-origin : left;
@@ -932,6 +994,34 @@ export const ToggleBar = styled.div`
         css`
         animation : ${sideBar} .5s ease-in-out forwards;
         ` }
+        .toggledDiv {
+            position : relative;
+            #a1 {
+                position : absolute;
+                top : 1rem;
+                left : 6rem;
+            }
+            #a2 {
+                position : absolute;
+                top : 4rem;
+                left : 6rem; 
+            }
+            #a3 {
+                position : absolute;
+                top : 7rem;
+                left : 6rem; 
+            }
+            #a4 {
+                position : absolute;
+                top : 10rem;
+                left : 6rem; 
+            }
+            #a5 {
+                position : absolute;
+                top : 13rem;
+                left : 6rem; 
+            }
+        }
 `
 
 //! end header

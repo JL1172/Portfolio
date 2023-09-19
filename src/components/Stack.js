@@ -12,7 +12,7 @@ import { Circles } from "react-loader-spinner";
 
 function Stack(props) {
     return (
-        <StyledStack stackRootVisible={props.stackRootVisible} >
+        <StyledStack id ="aStack" stackRootVisible={props.stackRootVisible} >
             <div id="headingStack">
                 <div>
                     <h1>myStack{"()"} {"{"}</h1>
