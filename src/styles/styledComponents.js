@@ -868,8 +868,65 @@ left : 15rem;
     `
     }
 }
-
-
+.ninthRoute {
+    content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 16.7rem;
+        bottom : 3rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props =>
+        props.projectsRootVisible &&
+        css`        
+        animation : ${routeLine3} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+    }
+}
+.tenthRoute {
+    content : "";
+    position : absolute;
+    border : 1px solid aquamarine;
+        left : 13.7rem;
+        bottom : 3rem;
+        opacity : 0;
+        transform-origin : left;
+        ${props => props.projectsRootVisible &&
+        css`
+        animation : ${xLine} .4s ease-in-out forwards;
+        `}
+}
+.move-x5 {
+    position : absolute;
+    border-radius : 10rem;
+    bottom : 2.3rem;
+    left : 13.25rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.projectsRootVisible &&
+        css`
+    animation : ${slideOnX2} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
+}
+.move-y5 {
+    position : absolute;
+    left : 16rem;
+    bottom : 2.3rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.projectsRootVisible &&
+        css`
+    animation : ${slideONY} 1s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
 `
 
 

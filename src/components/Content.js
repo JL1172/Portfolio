@@ -128,6 +128,8 @@ function Content(props) {
                         <span className="sixthRoute"></span>
                         <span className="seventhRoute"></span>
                         <span className="eigthRoute"></span>
+                        <span className="ninthRoute"></span>
+                        <span className="tenthRoute"></span>
                     </section>
                     <span id="circle3" className="material-symbols-outlined">
                         circle
