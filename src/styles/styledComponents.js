@@ -943,6 +943,11 @@ export const HeaderDiv = styled.div`
   z-index : 2;
   flex-basis : 100px;
   color : gray;
+  /* position : relative; */
+  #myHeaderName {
+    position : absolute;
+    left : 4rem;
+  }
   #menu {
     display : flex;
     justify-content : space-around;
@@ -970,13 +975,13 @@ const sideBar = keyframes`
 }
 100% {
     opacity : 1;
-    transform : scaleX(100%); 
+    transform : scaleX(110%); 
 }
 `
 export const ToggleBar = styled.div`
         position : absolute;
         top : 7rem;
-        height : 40rem;
+        height : 20rem;
         width : 15rem;
         transition : 2s ease-out; 
         transform-origin : left;
@@ -989,6 +994,34 @@ export const ToggleBar = styled.div`
         css`
         animation : ${sideBar} .5s ease-in-out forwards;
         ` }
+        .toggledDiv {
+            position : relative;
+            #a1 {
+                position : absolute;
+                top : 1rem;
+                left : 6rem;
+            }
+            #a2 {
+                position : absolute;
+                top : 4rem;
+                left : 6rem; 
+            }
+            #a3 {
+                position : absolute;
+                top : 7rem;
+                left : 6rem; 
+            }
+            #a4 {
+                position : absolute;
+                top : 10rem;
+                left : 6rem; 
+            }
+            #a5 {
+                position : absolute;
+                top : 13rem;
+                left : 6rem; 
+            }
+        }
 `
 
 //! end header

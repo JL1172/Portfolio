@@ -9,7 +9,7 @@ function ContactForm(props) {
         status, showMessage, closeShowMessage, errorData, disabled] = useForm(initialState, initialStateForStatus, "_form_data_")
 
     return (
-        <StyledForm contactRootVisible={props.contactRootVisible}>
+        <StyledForm id = "aContact" contactRootVisible={props.contactRootVisible}>
             <h1>Contact Form</h1>
             {showMessage ? <div id = "successMessage">
                     <AiOutlineClose style = {{marginBottom : "2rem", width : "3rem",height : "3rem"}} color="aquamarine" onClick={() => closeShowMessage()} />
