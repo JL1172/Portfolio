@@ -2,9 +2,10 @@ import { Placeholder } from "reactstrap";
 import { ContentDiv } from "../styles/styledComponents";
 import { connect } from "react-redux";
 import About from "./About";
-import { fetchDataSuccess, rootAboutVisible, toggleContactVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
+import { fetchDataSuccess, rootAboutVisible, toggleCVVisibility, toggleContactVisibility, toggleStackVisibility } from "./actions/aboutMeAction";
 import Stack from "./Stack";
 import ContactForm from "./ContactForm";
+import CV from "./CV";
 
 function Content(props) {
     return (
@@ -76,7 +77,7 @@ function Content(props) {
                         <span className="material-symbols-outlined line line3">
                             horizontal_rule
                         </span>
-                        <div id="cv"><span className="material-symbols-outlined">
+                        <div onClick={()=> props.toggleCVVisibility()} id="cv"><span className="material-symbols-outlined">
                             work
                         </span>CV</div>
                         <span className="material-symbols-outlined line line4">
@@ -123,6 +124,7 @@ function Content(props) {
             {props.aboutIsVisible && <About />}
             {props.stackRootVisible && <Stack/>}
             {props.contactRootVisible && <ContactForm />}
+            {props.cvRootVisible && <CV/>}
         </div>
     )
 }
@@ -132,6 +134,7 @@ const mapStateToProps = state => {
         aboutIsVisible: state.aboutMeState.rootVisible,
         stackRootVisible : state.aboutMeState.stackRootVisible,
         contactRootVisible : state.aboutMeState.contactRootVisible,
+        cvRootVisible : state.aboutMeState.cvRootVisible,
     }
 }
-export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility, toggleContactVisibility })(Content);
+export default connect(mapStateToProps, { fetchDataSuccess, toggleStackVisibility, toggleContactVisibility, toggleCVVisibility })(Content);

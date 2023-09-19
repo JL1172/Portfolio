@@ -82,6 +82,7 @@ export const StyledStack = styled.div`
         margin-left : 3%;
     }
     .body1 {
+        margin-left : 2rem;
         display : flex;
         margin-bottom : 4rem;
         box-shadow : 0 0 2em rgb(19, 16, 16);

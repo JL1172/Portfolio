@@ -7,6 +7,8 @@ export const ROOT_STACK_VISIBLE = "ROOT_STACK_VISIBLE";
 export const TOGGLE_ACTIVE = "TOGGLE_ACTIVE"; 
 export const TOGGLE_CONTACT_VISIBILITY = "TOGGLE_CONTACT_VISIBILITY"; 
 
+export const TOGGLE_CV_VISIBILITY = "TOGGLE_CV_VISIBILITY"; 
+
 export const fetchDataSuccess = () => dispatch => {
     dispatch(rootAboutVisible())
     dispatch(fetchingDataLoader(true)); 
@@ -46,4 +48,11 @@ export const toggleActive = (bool) => {
 
 export const toggleContactVisibility = () => {
     return {type : TOGGLE_CONTACT_VISIBILITY}
+}
+//!end of contact
+
+//!CV
+
+export const toggleCVVisibility = () => {
+    return{type : TOGGLE_CV_VISIBILITY};
 }
