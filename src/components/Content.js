@@ -10,7 +10,7 @@ import CV from "./CV";
 function Content(props) {
     return (
         <div style={{ position: "relative", width: "100%" }}>
-            <ContentDiv contactRootVisible = {props.contactRootVisible} 
+            <ContentDiv contactRootVisible = {props.contactRootVisible} cvRootVisible = {props.cvRootVisible}
             visible={props.menuVisibility} aboutVisible={props.aboutIsVisible} stackVisible = {props.stackRootVisible}>
                 <main className="words">
                     <span className="material-symbols-outlined circle">
@@ -109,12 +109,19 @@ function Content(props) {
                         </span><span className="material-symbols-outlined move-y3">
                             circle
                         </span>
+                        <span  className="material-symbols-outlined move-x4">
+                            circle
+                        </span><span className="material-symbols-outlined move-y4">
+                            circle
+                        </span>
                         <span className="firstRoute"></span>
                         <span className="secondRoute"></span>
                         <span className="thirdRoute"></span>
                         <span className="fourthRoute"></span>
                         <span className="fifthRoute"></span>
                         <span className="sixthRoute"></span>
+                        <span className="seventhRoute"></span>
+                        <span className="eigthRoute"></span>
                     </section>
                     <span id="circle3" className="material-symbols-outlined">
                         circle

@@ -92,9 +92,6 @@ export const StyledCV = styled.div`
     width  :90vw;
     position :relative;
    }
-   .h5h55For {
-    position : relative;
-   }
    #topHeading {
     border-bottom : 2px solid gray;
     display : flex;
@@ -107,5 +104,7 @@ export const StyledCV = styled.div`
    .h5h5,.h5h55,.h5h56,.h5h57 {
     color : white;
     margin : 0;
+    border-bottom : 1px solid aquamarine;
+    
    }
 `

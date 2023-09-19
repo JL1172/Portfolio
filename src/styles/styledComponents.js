@@ -807,6 +807,69 @@ div:nth-child(12) {
     `
     }
 }
+
+.seventhRoute::after {
+        content : "";
+        position : absolute;
+        border : 1px solid aquamarine;
+        left : 15.7rem;
+        bottom : 11.1rem;
+        transform-origin : top;
+        opacity : 0;
+        ${props =>
+        props.cvRootVisible &&
+        css`        
+        animation : ${routeLine3} .4s ease-in-out forwards;
+        animation-delay : .6s;
+        `
+    }
+}
+.eigthRoute::after {
+    content : "";
+    position : absolute;
+    border : 1px solid aquamarine;
+        left : 12.7rem;
+        bottom : 11.1rem;
+        opacity : 0;
+        transform-origin : left;
+        ${props => props.cvRootVisible &&
+        css`
+        animation : ${xLine} .4s ease-in-out forwards;
+        `}
+}
+
+.move-x4 {
+    position : absolute;
+    border-radius : 10rem;
+    bottom : 10.5rem;
+    left : 12.61rem;
+    opacity : 0;
+    color : aquamarine;
+    box-shadow : 0 0 1em aquamarine;
+    ${props => props.cvRootVisible &&
+        css`
+    animation : ${slideOnX2} .7s ease-in-out forwards;
+    animation-delay : .2s;
+    `
+    }
+}
+.move-y4 {
+position : absolute;
+left : 15rem;
+    bottom : 10.49rem;
+    opacity : 0;
+    border-radius : 10rem;
+    box-shadow : 0 0 1em aquamarine;
+    color : aquamarine;
+    ${props => props.cvRootVisible &&
+        css`
+    animation : ${slideONY} 1s ease-in-out forwards;
+    animation-delay : .6s;
+    `
+    }
+}
+
+
 `
 
 

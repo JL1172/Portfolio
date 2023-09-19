@@ -5,13 +5,14 @@ import {BiLinkExternal} from "react-icons/bi";
 const CV = (props) => {
     return (
         <StyledCV cvRootVisible={props.cvRootVisible}>
-            <h1>My CV<a title = "complete CV" href = "https://www.linkedin.com/in/jacob-lang1172/" target = "_blank"><BiLinkExternal /></a></h1>
+            <h1>My CV<a title = "complete CV" href = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211051242&authkey=!ALghyN_Cedg1NWo&em=2" target = "_blank"><BiLinkExternal /></a></h1>
             <div id="bodyDiv">
                 <div id ="topHeading">
                     <h1 id='myName' class='title name'>Jacob Lang</h1>
                     <h4 class='header-top heading'>Wilmington, DE 19807</h4>
                     <h4 class='header-top heading'>302-377-2097</h4>
                     <h4 class='header-top heading'>jacoblang127@gmail.com</h4>
+                    <p>Note : The link above is a link to the full CV</p>
                 </div>
                 <div className = "mainContent" >
                  
@@ -19,7 +20,7 @@ const CV = (props) => {
                     
                     <div>
                     <div  className="h5h55For">
-                    <h5 className="h5h5">Grand Canyon University <span class='noBoldness'>Phoenix, AZ</span></h5>
+                    <h5 className="h5h5">Grand Canyon University <span class='noBoldness'>Phoenix,AZ</span></h5>
                     </div>
                     <h5>Accounting with an Emphasis in Public Accounting</h5>
                     <div  className="h5h55For">
