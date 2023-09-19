@@ -115,6 +115,11 @@ function Content(props) {
                         </span><span className="material-symbols-outlined move-y4">
                             circle
                         </span>
+                        <span  className="material-symbols-outlined move-x5">
+                            circle
+                        </span><span className="material-symbols-outlined move-y5">
+                            circle
+                        </span>
                         <span className="firstRoute"></span>
                         <span className="secondRoute"></span>
                         <span className="thirdRoute"></span>
