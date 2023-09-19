@@ -15,6 +15,7 @@ export const DEACTIVATE_PROJECT = "DEACTIVATE_PROJECT";
 
 export const MAXIMIZE_OR_MINIMIZE = "MAXIMIZE_OR_MINIMIZE";
 export const MINIMIZE = "MINIMIZE"
+export const TOGGLE_MENU = "TOGGLE_MENU";
 
 export const fetchDataSuccess = () => dispatch => {
     dispatch(rootAboutVisible())
@@ -87,3 +88,9 @@ export const minimize = (e) => {
     e.stopPropagation();
     return {type : MINIMIZE}; 
 }
+
+
+//!menu
+export const toggleTheMenu = () => {
+    return {type : TOGGLE_MENU}
+} 

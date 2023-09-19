@@ -9,7 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 function About(props) {
 
     return (
-        <AboutMe about={props.aboutIsVisible} >
+        <AboutMe id = "aAbout2" about={props.aboutIsVisible} >
             {props.loading ?
                 <div style={{ display: "flex", width: "99vw", justifyContent: "center" }}>
                     <Circles
