@@ -69,8 +69,8 @@ export const toggleProjectVisibility = () => {
 }
 
 export const activateProject = (id) => {
-    return {type : ACTIVATE_PROJECT, payload : id};
+        return {type : ACTIVATE_PROJECT, payload : id};
 }
-export const deactivateProject = (id) => {
-    return{type :DEACTIVATE_PROJECT, payload : id}
+export const deactivatedProjected = () => {
+    return{type :DEACTIVATE_PROJECT}
 }
