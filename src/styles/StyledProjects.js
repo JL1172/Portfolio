@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import { DiJsBadge } from "react-icons/di";
 
 const aboutRight = keyframes`
 0% {
@@ -17,6 +18,10 @@ const slider = keyframes`
     transform : translateX(15rem);
     opacity : 0;
 }
+`
+const rotate = keyframes`
+from {transform : rotate(0); opacity : 1; }
+to {transform : rotate(360deg); opacity : 1;}
 `
 
 export const StyledProjects = styled.div`
@@ -40,6 +45,7 @@ export const StyledProjects = styled.div`
     animation-delay : .6s;`}
     padding-left : 1rem;
     width : 99vw;
+    position : relative;
     h1 {
         margin : 1.5rem;
         margin-left : 3rem;
@@ -51,7 +57,7 @@ export const StyledProjects = styled.div`
         margin-top : 5rem;
         display : flex;
         min-height : 90vh;
-        border  : 2px solid white;
+        border : 2px solid gray;
         padding : 1rem;
       height : fit-content;
       background-color : rgb(19, 16, 16);
@@ -65,6 +71,8 @@ export const StyledProjects = styled.div`
       flex-wrap : wrap;
       margin-bottom : 8rem;
       .projectDivs {
+          z-index : 2;
+          background-color : rgb(19, 16, 16);
         margin-top : 1rem;
         flex-grow : 2;
         padding-top : 1rem;
@@ -77,14 +85,62 @@ export const StyledProjects = styled.div`
         justify-content : flex-start;
         align-items : center;
         flex-direction : column;
-    }
 }
+
 .activatedProject {
-            position : flex;
-            background-color : rgb(19, 16, 16); 
+            background-color : rgb(31, 29, 29); 
             transition : .3s ease-in-out; 
             height :40vw !important;
+            transition : .3s ease-in-out;
             position : relative;
+            p::after {
+                content : "Technologies";
+                position : absolute;
+                color : aquamarine;
+                left : 3rem;
+                bottom : -2rem;
+                font-size : 20px;
+            }
+            .tech {
+            position : absolute;
+            opacity : 1;
+            width : 2rem;
+            height : 2rem;
+            bottom : -5rem;
+            color : royalblue;
+}
+            .tech2 {
+            position : absolute;
+            width : 2rem;
+            height : 2rem;
+            bottom : -5rem;
+            color : royalblue;
+            left : 3rem;
+            }
+            .tech3 {
+            position : absolute;
+            width : 2rem;
+            height : 2rem;
+            bottom : -5rem;
+            color : royalblue;
+            left : 6rem;
+            }
+            .tech4 {
+            position : absolute;
+            width : 2rem;
+            height : 2rem;
+            bottom : -5rem;
+            color : royalblue;
+            left : 9rem;
+            }
+            .tech5 {
+            position : absolute;
+            width : 2rem;
+            height : 2rem;
+            bottom : -5rem;
+            color : royalblue;
+            left : 12rem;
+            }
             .headings {
                 color : aquamarine;
             }
@@ -96,6 +152,17 @@ export const StyledProjects = styled.div`
                 width : 1rem;
                 animation : ${slider} .7s ease-in-out forwards;
             }
+            ${props => props.maxOrMin &&
+        css`
+            position : absolute;
+            width : 95vw;
+            margin-left : 2%;
+            overflow-x : 0;
+            z-index : 3;
+            height : 80vh !important;
+            transition : .3s ease-in-out;
+            `
+    }
 }
 .iconClose {
     position : absolute;
@@ -119,7 +186,40 @@ export const StyledProjects = styled.div`
     width : 15rem;
     justify-content : flex-start;
     align-items : flex-start;
-    overflow : auto;
-    overflow-x: hidden;
+    overflow-y : scroll;
+    color : white;
 }
+.projectDivs:hover {
+    background-color : rgb(31, 29, 29);
+}
+.tightened::-webkit-scrollbar {
+    display : none;
+}
+.max {
+    position : absolute;
+    right : .2rem;
+    top : 3rem;
+    width : 1.5rem;
+    height : 1.5rem;
+
+}
+}
+.logo {
+    position : absolute;
+    width : 60vw;
+    height : 30vh;
+    color : royalblue;
+    z-index  : 1;   
+    bottom : 24rem;
+    opacity : 1;
+    animation : ${rotate} 10s infinite linear;
+}
+.logo2 {
+    position : absolute;
+    z-index : 1;
+    color : gray;
+    font-size : 20px;
+    bottom :45rem;
+}
+
 `

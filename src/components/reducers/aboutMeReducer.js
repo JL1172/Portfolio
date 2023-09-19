@@ -1,4 +1,4 @@
-import { ACTIVATE_PROJECT, DEACTIVATE_PROJECT, FETCHING_DATA, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE, TOGGLE_CONTACT_VISIBILITY, TOGGLE_CV_VISIBILITY, TOGGLE_PROJECT_VISIBILITY } from "../actions/aboutMeAction"
+import { ACTIVATE_PROJECT, DEACTIVATE_PROJECT, FETCHING_DATA, MAXIMIZE_OR_MINIMIZE, MINIMIZE, PUT_DATA_IN_STATE, ROOT_ABOUT_VISIBLE, ROOT_STACK_VISIBLE, TOGGLE_ACTIVE, TOGGLE_CONTACT_VISIBILITY, TOGGLE_CV_VISIBILITY, TOGGLE_PROJECT_VISIBILITY } from "../actions/aboutMeAction"
 
 
 const initialState = {
@@ -15,6 +15,9 @@ const initialState = {
 
     activeProject : "",
     deactivateProject : false,
+
+    maxOrmin : false,
+    min : false,
 }
 
 export const aboutMeReducer = (state = initialState, action) => {
@@ -44,9 +47,13 @@ export const aboutMeReducer = (state = initialState, action) => {
             return({...state,frontEndVisible : false, backEndVisible : false,
                 cvRootVisible : false, projectsRootVisible : !state.projectsRootVisible, contactRootVisible :false, stackRootVisible : false, rootVisible : false})
         case(ACTIVATE_PROJECT) :
-            return({...state, activeProject :action.payload, deactivateProject : action.payload})
+            return({...state, activeProject :action.payload, deactivateProject : action.payload, maxOrmin : false, min : false})
         case(DEACTIVATE_PROJECT) :
-            return({...state, activeProject : "", deactivateProject : ""}); 
+            return({...state, activeProject : "", deactivateProject : "", maxOrmin : false, min : false}); 
+        case(MAXIMIZE_OR_MINIMIZE) :
+            return({...state, maxOrmin : !state.maxOrmin, min : true })
+        case(MINIMIZE) :
+            return({...state, maxOrmin : !state.maxOrmin, min : false })
         default :
             return(state); 
     }

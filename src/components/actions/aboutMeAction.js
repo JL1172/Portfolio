@@ -13,6 +13,9 @@ export const TOGGLE_CV_VISIBILITY = "TOGGLE_CV_VISIBILITY";
 export const ACTIVATE_PROJECT = "ACTIVATE_PROJECT";
 export const DEACTIVATE_PROJECT = "DEACTIVATE_PROJECT"; 
 
+export const MAXIMIZE_OR_MINIMIZE = "MAXIMIZE_OR_MINIMIZE";
+export const MINIMIZE = "MINIMIZE"
+
 export const fetchDataSuccess = () => dispatch => {
     dispatch(rootAboutVisible())
     dispatch(fetchingDataLoader(true)); 
@@ -73,4 +76,14 @@ export const activateProject = (id) => {
 }
 export const deactivatedProjected = () => {
     return{type :DEACTIVATE_PROJECT}
+}
+
+export const maximizeOrMinimize = (e) => {
+    e.stopPropagation();
+    return {type : MAXIMIZE_OR_MINIMIZE};
+}
+
+export const minimize = (e) => {
+    e.stopPropagation();
+    return {type : MINIMIZE}; 
 }

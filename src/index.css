@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth !important;
+  color : rgb(31, 29, 29);
 }
 a {
   text-decoration: none !important;
