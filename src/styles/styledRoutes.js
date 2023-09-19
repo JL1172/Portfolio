@@ -67,12 +67,12 @@ export const StyledStack = styled.div`
     &:hover {
         color : white;
         background-color : rgb(70, 69, 69);
-        border-top : 1px solid dodgerblue;
+        border-top : 1px solid rgb(157, 43, 233);
     }
     }
     .active {
         background-color : rgb(19, 16, 16);
-        border-top : 1px solid dodgerblue;
+        border-top : 1px solid rgb(157, 43, 233);
     }
     #front {
         border-right : 1px solid gray;
