@@ -1022,6 +1022,10 @@ export const ToggleBar = styled.div`
                 top : 13rem;
                 left : 6rem; 
             }
+            #a1:hover, #a2:hover, #a3:hover, #a4:hover, #a5:hover {
+                color: white;
+                transition : .1s ease-in-out; 
+            }
         }
 `
 
