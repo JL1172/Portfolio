@@ -50,7 +50,7 @@ export const useForm = (initialState, initialStateForStatus, key) => {
         .then(()=> {
             setStatus(initialStateForStatus)
             setShowMessage(true);
-            setStatus({...status, info : {...status.info, msg : "Thanks for reaching out, I will be in contact soon!"}})
+            setStatus({...status, info : {...status.info, msg : "Thanks for reaching out. I will be in contact soon!"}})
         })
         .catch(err=> {
             setShowMessage(true);
