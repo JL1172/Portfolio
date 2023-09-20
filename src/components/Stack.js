@@ -36,13 +36,13 @@ function Stack(props) {
                             <div className="divUl">
                                 <h4>{"<"}Styling{">"}</h4>
                                 <div className="relative">
-                                    <li><DiBootstrap style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Bootstrap <FiExternalLink /></a></li>
+                                    <li><DiBootstrap style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://react-forms-playground.vercel.app/">Bootstrap <FiExternalLink /></a></li>
                                 </div>
                                 <div className="relative">
-                                    <li><DiReact style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Reactstrap <FiExternalLink /></a></li>
+                                    <li><DiReact style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://react-forms-playground.vercel.app/">Reactstrap <FiExternalLink /></a></li>
                                 </div>
                                 <div className="relative">
-                                    <li className="case2"><SiStyledcomponents style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">Styled-Components <FiExternalLink /></a></li>
+                                    <li className="case2"><SiStyledcomponents style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://react-forms-playground.vercel.app/">Styled-Components <FiExternalLink /></a></li>
                                 </div>
                                 <span className="relative">
                                     <li><BsFiletypeCss style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/SpotifyLogin">CSS <FiExternalLink /></a></li>
@@ -51,7 +51,7 @@ function Stack(props) {
                             <div className="divUl">
                                 <h4>{"<"}Supplementary Libraries{">"}</h4>
                                 <span className="relative">
-                                    <li><SiReactrouter style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/React-Form-Playground">React-Router <FiExternalLink /></a></li>
+                                    <li><SiReactrouter style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://react-forms-playground.vercel.app/">React-Router <FiExternalLink /></a></li>
                                 </span>
                                 <span className="relative">
                                     <li><TbBrandRedux style={{ color: "rgb(157, 43, 233)" }} /><a target="_blank" href="https://github.com/JL1172/Stock-Market-Trading-App">Redux <FiExternalLink /></a></li>
