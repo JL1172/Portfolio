@@ -37,7 +37,7 @@ const Projects = (props) => {
                     className={props.activeProject === "React Form Playground" ? "projectDivs activatedProject" : "projectDivs"}>
                     {props.deactivateProject === "React Form Playground" && <AiOutlineClose className="iconClose" onClick={()=>props.deactivatedProjected()}/>}
                     {props.deactivateProject === "React Form Playground" &&  !props.min ? <BiExpand className="max" onClick={(e)=>props.maximizeOrMinimize(e)}/> : props.min && <TbArrowsMinimize className="max" onClick={(e=> props.minimize(e))} />}
-                    {props.deactivateProject === "React Form Playground" && <a  onClick={(e)=> e.stopPropagation()} className="iconLink" href = "https://react-forms-playground.vercel.app/" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
+                    {props.deactivateProject === "React Form Playground" && <a  onClick={(e)=> e.stopPropagation()} className="iconLink" href = "https://github.com/JL1172/React-Forms" target="_blank"><BiLinkExternal style = {{width : "1.5rem", height : "1.5rem", color : "rgb(157, 43, 233)"}}  /></a>}
                     <span className="headings" aria-label="2">React Form Playground<DiJsBadge /> </span>
                     <div className = "tightened">
                     {props.deactivateProject === "React Form Playground" && <div style = {{position : "relative"}}>
