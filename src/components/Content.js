@@ -66,9 +66,9 @@ function Content(props) {
                         <span className="material-symbols-outlined line line1">
                             horizontal_rule
                         </span>
-                        <div onClick={() => props.fetchDataSuccess()} id="about"><span className="material-symbols-outlined">
+                        <a href = "#aAbout2"><div onClick={() => props.fetchDataSuccess()} id="about"><span className="material-symbols-outlined">
                             info
-                        </span>About Me</div>
+                        </span>About Me</div></a>
                         <span className="material-symbols-outlined line line2">
                             horizontal_rule
                         </span>
@@ -95,7 +95,7 @@ function Content(props) {
                             stack
                         </span>Projects</div>
 
-                        <span className="material-symbols-outlined move-x">
+                        <span  className="material-symbols-outlined move-x">
                             circle
                         </span><span className="material-symbols-outlined move-y">
                             circle
