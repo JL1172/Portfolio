@@ -11,7 +11,7 @@ function Header(props) {
             <div id="menu" ><span onClick={() => props.toggleTheMenu()} id="menuIcon" className="material-symbols-outlined">
                 {props.menuIsVisible ? "close" : "menu"}
             </span>
-            <span id ="myHeaderName">{"<JacobLang>"}</span>
+            <span style = {{color:"white"}} id ="myHeaderName">{"<JacobLang> "}<span style = {{color : "red"}}>Under Construction</span></span>
                 <ToggleBar menuVisible={props.menuIsVisible}>
                     <div className="toggledDiv">
                         <a href = "#aAbout2"><div onClick={() => props.fetchDataSuccess()} id="a1"><span className="material-symbols-outlined">
